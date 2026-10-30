@@ -1,6 +1,6 @@
-# OWASP Top 10 for Personal AI Agents (PAA10)
+**Website: https://kenhuangus.github.io/owasp-top-10-for-personal-ai-agents/**
 
-**Read it online: https://kenhuangus.github.io/owasp-top-10-for-personal-ai-agents/**
+# OWASP Top 10 for Personal AI Agents (PAA10)
 
 **Status: initial draft (v0.1), not an official OWASP release.** Proposed documentation project; leaders proposed in the project request: Ken Huang (lead), Iftach Orr and Dean Issacharoff (co-leads).
 
