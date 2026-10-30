@@ -13,6 +13,8 @@ It identifies related mechanisms and controls, not equivalence or endorsement. T
 
 The AST and MCP lists describe the components a personal agent is assembled from: the skills it installs and the MCP servers it connects to. PAA10 describes what happens to the person when those components, or the agent itself, fail. A malicious skill (AST01) or a poisoned tool (MCP03) is a cause; a drained account (PAA02), a scam payment (PAA05) or a steered choice (PAA09) is the personal harm it produces. Use the AST and MCP controls to secure the components, and the PAA controls to bound what any component can do to the person.
 
+For which [paa10-guard](https://github.com/kenhuangus/paa10-guard) rules address each AST and MCP item, and whether that coverage is enforced or partial, see the [guard crosswalk](https://github.com/kenhuangus/paa10-guard/blob/main/docs/crosswalk.md).
+
 ## By PAA entry
 
 | PAA entry | ASI 2026 | LLM 2025 | Agentic Skills (AST) | MCP | Additional personal focus |
