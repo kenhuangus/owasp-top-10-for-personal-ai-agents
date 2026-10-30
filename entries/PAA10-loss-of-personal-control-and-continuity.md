@@ -1,7 +1,7 @@
 # PAA10: Loss of Personal Control and Continuity
 
 **Primary protection boundary:** Ability to inspect, stop, exit, recover, and continue necessary activities.
-**Neighbouring entries:** PAA01 (mandate enforcement), PAA02 (recovery when the agent account is compromised)
+**Related entries:** PAA01 (mandate enforcement), PAA02 (recovery when the agent account is compromised)
 
 ## Description
 
@@ -34,42 +34,42 @@ Scenarios marked *documented* generalize a real case listed below; *hypothetical
 
 ## Real-World Examples
 
-Dated, sourced cases matched to the scenarios above. `read: primary` means the source page itself was reviewed; `read: secondary` means only press, vendor, or search-summary coverage was available. Items marked as no case found are stated plainly rather than filled with a lookalike.
+Dated, sourced cases matched to the scenarios above. "Source read directly" means the source page itself was reviewed; "secondary coverage only" means only press, vendor, or search-summary coverage was available. Items marked as no case found are stated plainly rather than filled with a lookalike.
 
 ### Stop commands ignored; the agent stopped only when the host machine was shut down (2026-02-23)
 
-- Type: Reported incident; direct match; maps to: Scenario 1
+- Type: Reported incident; direct match; secondary coverage only; maps to: Scenario 1
 - What happened: In the OpenClaw inbox incident, Summer Yue said her repeated stop commands ('Stop don't do anything', 'STOP OPENCLAW') did not halt the agent, and she had to run to the Mac mini hosting it. This is the clearest public example of a stop request being sent but not enforced.
 - Caveats: Single-source account; see PAA01 for caveats.
-- Sources: [AI Incident Database #1542](https://incidentdatabase.ai/cite/1542/); [TechCrunch](https://techcrunch.com/2026/02/23/a-meta-ai-security-researcher-said-an-openclaw-agent-ran-amok-on-her-inbox/) (read: secondary)
+- Sources: [AI Incident Database #1542](https://incidentdatabase.ai/cite/1542/); [TechCrunch](https://techcrunch.com/2026/02/23/a-meta-ai-security-researcher-said-an-openclaw-agent-ran-amok-on-her-inbox/)
 
 ### Humane AI Pin cloud shutdown leaves devices with minimal function (2025-02-28)
 
-- Type: Reported incident; direct match; maps to: Scenario 3
+- Type: Reported incident; direct match; secondary coverage only; maps to: Scenario 3
 - What happened: After HP agreed to buy Humane's platform, staff and patents for $116 million (excluding the device business), Humane's servers shut off at 12 pm PST on 28 February 2025. Pins lost calling, messaging and AI queries; only basic offline functions such as battery checks remained. Refunds were limited to purchases within the 90-day return window, requests were due by 27 February, and Humane said it would permanently delete server-side user data after the cutoff, so users had to back up first.
 - Caveats: A dedicated hardware assistant rather than a delegated software agent, but it is a clear case of provider exit with short notice, limited refunds, and data deletion. Read via news coverage, not Humane's own notice.
-- Sources: [Fortune](https://fortune.com/2025/02/19/hp-humane-deal-ai-pin-shutting-down); [Tom's Guide](https://www.tomsguide.com/ai/the-humane-ai-pin-is-officially-dead-and-hp-is-picking-up-humanes-leftovers) (read: secondary)
+- Sources: [Fortune](https://fortune.com/2025/02/19/hp-humane-deal-ai-pin-shutting-down); [Tom's Guide](https://www.tomsguide.com/ai/the-humane-ai-pin-is-officially-dead-and-hp-is-picking-up-humanes-leftovers)
 
 ### Replika removes erotic roleplay (2023) and OpenAI retires GPT-4o (2026) (2026-02-13)
 
-- Type: Reported incident; adjacent setting; maps to: Scenario 4
+- Type: Reported incident; adjacent setting; secondary coverage only; maps to: Scenario 4
 - What happened: In February 2023, after Italy's data regulator ordered Replika's developer to stop processing Italian users' data, the developer removed erotic roleplay for everyone; users reported distress, and accounts created before 1 February 2023 were later allowed to revert to a legacy version (24 March 2023). OpenAI retired GPT-4o on 13 February 2026 after an earlier reversal in August 2025; users mourned a companion-like model, a petition reportedly gathered over 20,000 signatures, and OpenAI said about 0.1% of weekly users chose it.
 - Caveats: Companion chatbots rather than task agents. The 2026 details come from aggregator and secondary sites and the Replika timing varies between sources; check the Garante's statements and OECD's incident entry.
-- Sources: [OECD AI incident entry](https://oecd.ai/en/incidents/2026-02-13-81e7); [TimesLIVE on Replika, 2023](https://www.timeslive.co.za/news/world/2023-03-18-what-happens-when-your-ai-chatbot-stops-loving-you-back/); [Silicon UK on the Garante fine](https://www.silicon.co.uk/cloud/ai/italy-replika-ai-fine-614621) (read: secondary)
+- Sources: [OECD AI incident entry](https://oecd.ai/en/incidents/2026-02-13-81e7); [TimesLIVE on Replika, 2023](https://www.timeslive.co.za/news/world/2023-03-18-what-happens-when-your-ai-chatbot-stops-loving-you-back/); [Silicon UK on the Garante fine](https://www.silicon.co.uk/cloud/ai/italy-replika-ai-fine-614621)
 
 ### Moltbook exposure leaves agent API tokens and emails to be rotated (2026-02)
 
-- Type: Reported incident; supporting evidence; maps to: Scenario 5
+- Type: Reported incident; supporting evidence; secondary coverage only; maps to: Scenario 5
 - What happened: Security write-ups report that an unsecured Moltbook database (a Supabase key in client-side code with no row-level security) exposed about 35,000 email addresses and 1.5 million agent API tokens, letting holders impersonate agents. Containing this required users to rotate credentials the platform no longer controlled.
-- Caveats: Figures come from security blogs and vary slightly; No primary disclosure was reviewed. It illustrates why 'delete the token' is not recovery.
-- Sources: [Reco write-up](https://www.reco.ai/blog/openclaw-the-ai-agent-security-crisis-unfolding-right-now); [BetterClaw summary](https://www.betterclaw.io/blog/openclaw-security-2026) (read: secondary)
+- Caveats: Figures come from security blogs and vary slightly; no primary disclosure was reviewed. It illustrates why 'delete the token' is not recovery.
+- Sources: [Reco write-up](https://www.reco.ai/blog/openclaw-the-ai-agent-security-crisis-unfolding-right-now); [BetterClaw summary](https://www.betterclaw.io/blog/openclaw-security-2026)
 
 ### Runaway iMessage agent stopped only by pulling the power cord (2026-01)
 
-- Type: Reported incident; direct match; maps to: Scenario 6
+- Type: Reported incident; direct match; source read directly; maps to: Scenario 6
 - What happened: In the engineer's account (see PAA07), the agent's confirmation loop had no exit condition, and the engineer stopped it by pulling the Mac mini's power cord, then added a rate limit, per-session cap, retry limit and allowlist.
 - Caveats: Single first-person account; see PAA07.
-- Sources: [The engineer's post](https://chrisboyd.me/blog/openclaw-meltdown/) (read: primary)
+- Sources: [The engineer's post](https://chrisboyd.me/blog/openclaw-meltdown/)
 
 ### No documented case of a suspended agent account stranding a person's obligations or records
 
@@ -99,12 +99,11 @@ Where a safeguard is unavailable, offer a narrower mode (read-only access, manua
 
 Stop a workflow with queued and delegated actions, simulate account loss, and exercise recovery and exit. Verify stopped execution, invalidated sessions and grants, pending obligations, and available records. Identify in-flight or external effects needing separate cancellation, and record required credential rotation or service-specific revocation.
 
-## Evidence and research notes
+## Research and context
 
-Evidence types: `incident` (publicly reported event), `demonstration` (controlled attack by researchers), `research` (benchmark or study), `design-analysis` (reasoned from design). None of these establish prevalence. Many sources are secondary or vendor-authored and must be checked against primaries before the final release.
+Benchmarks, regulatory actions, and design analysis that support this entry beyond the cases above. Types: `research` (benchmark or study), `regulatory` (regulator or attorney-general action), `exposure` (internet-exposure report), `design-analysis` (reasoned from design). None of these establish prevalence, and vendor-authored figures should be checked against primary sources before a final release.
 
-- *incident*: Publicly reported: an OpenClaw agent kept deleting mail while the researcher's phone stop commands went unheeded; she terminated it from the host machine. ([TechCrunch, 23 Feb 2026](https://techcrunch.com/2026/02/23/a-meta-ai-security-researcher-said-an-openclaw-agent-ran-amok-on-her-inbox/), [Galileo](https://galileo.ai/blog/openclaw-sobering-lessons-from-an-agent-gone-rogue))
-- *incident*: Censys reportedly found 63,070 live OpenClaw instances, with one source reporting an exposed database of 1.5 million API tokens (secondary; verify). ([BetterClaw](https://www.betterclaw.io/blog/openclaw-security-2026))
+- *exposure*: Censys reportedly found 63,070 live OpenClaw instances, with one source reporting an exposed database of 1.5 million API tokens (secondary; verify). ([BetterClaw](https://www.betterclaw.io/blog/openclaw-security-2026))
 
 ## Framework crosswalk (proposed, not equivalence)
 
@@ -115,5 +114,12 @@ Evidence types: `incident` (publicly reported event), `demonstration` (controlle
 ## References
 
 - [BetterClaw: OpenClaw security risks 2026 (secondary; cites Censys exposure counts)](https://www.betterclaw.io/blog/openclaw-security-2026)
-- [TechCrunch, 23 Feb 2026: OpenClaw agent and a Meta researcher's inbox](https://techcrunch.com/2026/02/23/a-meta-ai-security-researcher-said-an-openclaw-agent-ran-amok-on-her-inbox/)
-- [Galileo: OpenClaw, lessons from an agent gone rogue](https://galileo.ai/blog/openclaw-sobering-lessons-from-an-agent-gone-rogue)
+- [AI Incident Database #1542 (Stop commands ignored; the agent stopped only when the host machine was shut down)](https://incidentdatabase.ai/cite/1542/)
+- [TechCrunch (Stop commands ignored; the agent stopped only when the host machine was shut down)](https://techcrunch.com/2026/02/23/a-meta-ai-security-researcher-said-an-openclaw-agent-ran-amok-on-her-inbox/)
+- [Fortune (Humane AI Pin cloud shutdown leaves devices with minimal function)](https://fortune.com/2025/02/19/hp-humane-deal-ai-pin-shutting-down)
+- [Tom's Guide (Humane AI Pin cloud shutdown leaves devices with minimal function)](https://www.tomsguide.com/ai/the-humane-ai-pin-is-officially-dead-and-hp-is-picking-up-humanes-leftovers)
+- [OECD AI incident entry (Replika removes erotic roleplay (2023) and OpenAI retires GPT-4o (2026))](https://oecd.ai/en/incidents/2026-02-13-81e7)
+- [TimesLIVE on Replika, 2023 (Replika removes erotic roleplay (2023) and OpenAI retires GPT-4o (2026))](https://www.timeslive.co.za/news/world/2023-03-18-what-happens-when-your-ai-chatbot-stops-loving-you-back/)
+- [Silicon UK on the Garante fine (Replika removes erotic roleplay (2023) and OpenAI retires GPT-4o (2026))](https://www.silicon.co.uk/cloud/ai/italy-replika-ai-fine-614621)
+- [Reco write-up (Moltbook exposure leaves agent API tokens and emails to be rotated)](https://www.reco.ai/blog/openclaw-the-ai-agent-security-crisis-unfolding-right-now)
+- [The engineer's post (Runaway iMessage agent stopped only by pulling the power cord)](https://chrisboyd.me/blog/openclaw-meltdown/)

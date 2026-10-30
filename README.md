@@ -27,7 +27,8 @@ The list is an awareness taxonomy, not a ranking by measured frequency or severi
 - `scenarios/`: machine-readable synthetic scenarios and one control test per entry.
 - `crosswalk/`, `docs/crosswalk.md`: mapping to ASI 2026 and LLM 2025.
 - `docs/real-world-examples.md`: index of dated real-world cases per entry, with evidence type and how the source was read.
-- `docs/evidence-log.md`: research sources and known gaps from the first pass.
+- `docs/evidence-log.md`: every cited source grouped by entry, plus the known gaps.
+- `site/`: the GitHub Pages website, deployed by `.github/workflows/pages.yml`.
 - `docs/methodology.md`, `docs/roadmap.md`: selection method, release gates, plan.
 
 ## Scope

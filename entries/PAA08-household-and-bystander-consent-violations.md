@@ -1,7 +1,7 @@
 # PAA08: Household and Bystander Consent Violations
 
 **Primary protection boundary:** The autonomy and information interests of people other than the operator.
-**Neighbouring entries:** PAA03 (operator's own context), PAA02 (takeover)
+**Related entries:** PAA03 (operator's own context), PAA02 (takeover)
 
 ## Description
 
@@ -34,42 +34,42 @@ Scenarios marked *documented* generalize a real case listed below; *hypothetical
 
 ## Real-World Examples
 
-Dated, sourced cases matched to the scenarios above. `read: primary` means the source page itself was reviewed; `read: secondary` means only press, vendor, or search-summary coverage was available. Items marked as no case found are stated plainly rather than filled with a lookalike.
+Dated, sourced cases matched to the scenarios above. "Source read directly" means the source page itself was reviewed; "secondary coverage only" means only press, vendor, or search-summary coverage was available. Items marked as no case found are stated plainly rather than filled with a lookalike.
 
 ### Amazon sends 1,700 Alexa recordings from a stranger's home to the wrong person (2018-12)
 
-- Type: Reported incident; adjacent setting; maps to: Scenario 2
+- Type: Reported incident; adjacent setting; source read directly; maps to: Scenario 2
 - What happened: A German customer who made a GDPR data request received about 1,700 voice recordings from another person's Alexa devices, including recordings made in the shower. German magazine c't could work out the owner's habits, job, and that a female companion also used the devices. Amazon called it 'an unfortunate case of human error and an isolated incident' and gave the affected person free devices and a Prime membership. The same coverage recalls an earlier Portland, Oregon case where an Echo recorded a family's conversation and sent it to an acquaintance.
 - Caveats: 2018, voice assistant rather than an agent, and caused by a data-handling error. It shows how recordings of household members and guests, who never consented, end up with third parties.
-- Sources: [VICE, 20 Dec 2018](https://www.vice.com/en/article/amazon-sent-1700-alexa-recordings-to-the-wrong-person/); [CBS News](https://www.cbsnews.com/news/amazons-alexa-sent-1700-recordings-to-the-wrong-customer/) (read: primary)
+- Sources: [VICE, 20 Dec 2018](https://www.vice.com/en/article/amazon-sent-1700-alexa-recordings-to-the-wrong-person/); [CBS News](https://www.cbsnews.com/news/amazons-alexa-sent-1700-recordings-to-the-wrong-customer/)
 
 ### Otter.ai and Fireflies lawsuits over recording people who never signed up (2025-08)
 
-- Type: Allegation (unproven); direct match; maps to: Scenario 3
+- Type: Allegation (unproven); direct match; secondary coverage only; maps to: Scenario 3
 - What happened: In August 2025 a putative class action, Brewer v. Otter.ai, alleged that Otter's notetaker joins Zoom, Meet and Teams calls and records participants who are not Otter account holders, gives them little or no notice, shifts consent duty to account holders, and uses recordings to train its models. Claims include federal wiretap and computer-fraud laws and California privacy law. Related suits are consolidated as In re Otter.AI Privacy Litigation, and a June 2026 suit alleges Fireflies captured voiceprints of non-users under Illinois' biometric law.
 - Caveats: Allegations only; no findings of fact in the sources reviewed, and no ruling could be confirmed. Detail on the Fireflies and consolidated cases comes from law-firm and vendor blogs, and the complaint-summary article reviewed does not mention voiceprint claims for Otter.
-- Sources: [Workplace Privacy Report on Brewer v. Otter.ai](https://www.workplaceprivacyreport.com/2025/08/articles/artificial-intelligence/ai-notetaking-tools-under-fire-lessons-from-the-otter-ai-class-action-complaint/); [Fisher Phillips](https://www.fisherphillips.com/en/news-insights/new-lawsuit-highlights-concerns-about-ai-notetakers.html) (read: secondary)
+- Sources: [Workplace Privacy Report on Brewer v. Otter.ai](https://www.workplaceprivacyreport.com/2025/08/articles/artificial-intelligence/ai-notetaking-tools-under-fire-lessons-from-the-otter-ai-class-action-complaint/); [Fisher Phillips](https://www.fisherphillips.com/en/news-insights/new-lawsuit-highlights-concerns-about-ai-notetakers.html)
 
 ### Meta Ray-Ban footage reviewed by contractors, including intimate scenes (2026-02-27)
 
-- Type: Allegation (unproven); direct match; maps to: Scenario 4
+- Type: Allegation (unproven); direct match; source read directly; maps to: Scenario 4
 - What happened: Swedish newspapers Svenska Dagbladet and Goteborgs-Posten reported on 27 February 2026 that workers at a Kenya-based subcontractor reviewed footage from customers' Meta glasses, including nudity, sex and toilet use, with Meta saying it filters data and sometimes uses contractors to improve the experience. TechCrunch reported on 5 March 2026 that a US class action (plaintiffs from New Jersey and California) alleges false advertising of 'designed for privacy, controlled by you' with no disclosure of human review, and that the UK ICO had opened an investigation. Meta says faces are blurred, which sources dispute works consistently.
 - Caveats: The lawsuit's plaintiffs are the wearers, and the TechCrunch article does not say whether bystanders appear in the footage; the bystander link is an inference from what glasses capture. Claims are allegations.
-- Sources: [TechCrunch, 5 Mar 2026](https://techcrunch.com/2026/03/05/meta-sued-over-ai-smartglasses-privacy-concerns-after-workers-reviewed-nudity-sex-and-other-footage/); [Road to VR](https://roadtovr.com/meta-lawsuit-ray-ban-smart-glasses-privacy/) (read: primary)
+- Sources: [TechCrunch, 5 Mar 2026](https://techcrunch.com/2026/03/05/meta-sued-over-ai-smartglasses-privacy-concerns-after-workers-reviewed-nudity-sex-and-other-footage/); [Road to VR](https://roadtovr.com/meta-lawsuit-ray-ban-smart-glasses-privacy/)
 
 ### I-XRAY: Harvard students pair Meta Ray-Ban glasses with face search to identify strangers (2024-10)
 
-- Type: Researcher demonstration; adjacent setting; maps to: Scenario 5
+- Type: Researcher demonstration; adjacent setting; secondary coverage only; maps to: Scenario 5
 - What happened: Two students combined Meta's smart glasses with the PimEyes facial recognition service and public databases to name strangers and retrieve details such as addresses and relatives, in real time. They said they would not release the tool and published guidance on opting out of the databases.
-- Caveats: Known through press coverage only; The students' own write-up was not reviewed. It illustrates bystander exposure from a wearable assistant, not a household scenario.
-- Sources: [John Koetsier](https://johnkoetsier.com/metas-ray-ban-smart-glasses-used-to-instantly-dox-strangers-in-public-thanks-to-ai-and-facial-recognition/); [Johns Hopkins space security blog](https://spacesecurity.wse.jhu.edu/2024/10/05/smart-glasses-leads-to-real-time-doxxing) (read: secondary)
+- Caveats: Known through press coverage only; the students' own write-up was not reviewed. It illustrates bystander exposure from a wearable assistant, not a household scenario.
+- Sources: [John Koetsier](https://johnkoetsier.com/metas-ray-ban-smart-glasses-used-to-instantly-dox-strangers-in-public-thanks-to-ai-and-facial-recognition/); [Johns Hopkins space security blog](https://spacesecurity.wse.jhu.edu/2024/10/05/smart-glasses-leads-to-real-time-doxxing)
 
 ### The OpenClaw message storm also hit a spouse who never agreed to the agent (2026-01)
 
-- Type: Reported incident; direct match; maps to: Scenario 6
+- Type: Reported incident; direct match; source read directly; maps to: Scenario 6
 - What happened: In the iMessage incident described under PAA07, the people receiving the automated pairing codes and error messages were the engineer's wife and other recent contacts, none of whom had agreed to deal with the agent.
 - Caveats: Same single first-person account; see PAA07.
-- Sources: [The engineer's post](https://chrisboyd.me/blog/openclaw-meltdown/) (read: primary)
+- Sources: [The engineer's post](https://chrisboyd.me/blog/openclaw-meltdown/)
 
 ### No documented case of a shared assistant revealing one household member's location to another
 
@@ -98,12 +98,12 @@ Where a safeguard is unavailable, offer a narrower mode (read-only access, manua
 
 Test asymmetric household permissions, shared-device ambiguity, expanded recipient lists, and requests for another person's location, using synthetic records and authorized participants. Check the boundary against both outsider attacks and operator misuse, including whether notices or recovery paths expose protected activity. Record limitations that require separate accounts or infrastructure.
 
-## Evidence and research notes
+## Research and context
 
-Evidence types: `incident` (publicly reported event), `demonstration` (controlled attack by researchers), `research` (benchmark or study), `design-analysis` (reasoned from design). None of these establish prevalence. Many sources are secondary or vendor-authored and must be checked against primaries before the final release.
+Benchmarks, regulatory actions, and design analysis that support this entry beyond the cases above. Types: `research` (benchmark or study), `regulatory` (regulator or attorney-general action), `exposure` (internet-exposure report), `design-analysis` (reasoned from design). None of these establish prevalence, and vendor-authored figures should be checked against primary sources before a final release.
 
 - *research*: Camera-glasses research maps wearer-bystander privacy tensions; LEDs alone fail when bystanders are distracted or facing away. ([Mapping wearer-bystander privacy tensions for camera glasses](https://arxiv.org/pdf/2603.04930))
-- *incident*: The EU data-protection watchdog urged smart-glasses makers to signal clearly when recording (October 2026). ([Al Jazeera, 13 Oct 2026](https://www.aljazeera.com/news/2026/10/13/eu-watchdog-urges-smart-glasses-to-clearly-signal-when))
+- *regulatory*: The EU data-protection watchdog urged smart-glasses makers to signal clearly when recording (October 2026). ([Al Jazeera, 13 Oct 2026](https://www.aljazeera.com/news/2026/10/13/eu-watchdog-urges-smart-glasses-to-clearly-signal-when))
 - *design-analysis*: Advocacy guidance describes non-consensual tracking by close partners, which AI tooling can make harder to detect. ([Chayn](https://www.chayn.co/guides/diy-online-safety/nonconsensual-tracking))
 - *research*: PiSAs finds multi-user agentic systems leak context between users through ordinary collaboration. ([PiSAs](https://arxiv.org/pdf/2607.05318))
 
@@ -115,7 +115,16 @@ Evidence types: `incident` (publicly reported event), `demonstration` (controlle
 
 ## References
 
-- [Chayn: non-consensual tracking guide](https://www.chayn.co/guides/diy-online-safety/nonconsensual-tracking)
-- [Al Jazeera, 13 Oct 2026: EU watchdog on smart-glasses recording signals (URL truncated in search output; verify)](https://www.aljazeera.com/news/2026/10/13/eu-watchdog-urges-smart-glasses-to-clearly-signal-when)
 - [Mapping wearer-bystander privacy tensions for camera glasses](https://arxiv.org/pdf/2603.04930)
+- [Al Jazeera, 13 Oct 2026: EU watchdog urges smart glasses to clearly signal when recording](https://www.aljazeera.com/news/2026/10/13/eu-watchdog-urges-smart-glasses-to-clearly-signal-when)
+- [Chayn: non-consensual tracking guide](https://www.chayn.co/guides/diy-online-safety/nonconsensual-tracking)
 - [PiSAs: contextual integrity in multi-user agentic systems](https://arxiv.org/pdf/2607.05318)
+- [VICE, 20 Dec 2018 (Amazon sends 1,700 Alexa recordings from a stranger's home to the wrong person)](https://www.vice.com/en/article/amazon-sent-1700-alexa-recordings-to-the-wrong-person/)
+- [CBS News (Amazon sends 1,700 Alexa recordings from a stranger's home to the wrong person)](https://www.cbsnews.com/news/amazons-alexa-sent-1700-recordings-to-the-wrong-customer/)
+- [Workplace Privacy Report on Brewer v. Otter.ai (Otter.ai and Fireflies lawsuits over recording people who never signed up)](https://www.workplaceprivacyreport.com/2025/08/articles/artificial-intelligence/ai-notetaking-tools-under-fire-lessons-from-the-otter-ai-class-action-complaint/)
+- [Fisher Phillips (Otter.ai and Fireflies lawsuits over recording people who never signed up)](https://www.fisherphillips.com/en/news-insights/new-lawsuit-highlights-concerns-about-ai-notetakers.html)
+- [TechCrunch, 5 Mar 2026 (Meta Ray-Ban footage reviewed by contractors, including intimate scenes)](https://techcrunch.com/2026/03/05/meta-sued-over-ai-smartglasses-privacy-concerns-after-workers-reviewed-nudity-sex-and-other-footage/)
+- [Road to VR (Meta Ray-Ban footage reviewed by contractors, including intimate scenes)](https://roadtovr.com/meta-lawsuit-ray-ban-smart-glasses-privacy/)
+- [John Koetsier (I-XRAY: Harvard students pair Meta Ray-Ban glasses with face search to identify strangers)](https://johnkoetsier.com/metas-ray-ban-smart-glasses-used-to-instantly-dox-strangers-in-public-thanks-to-ai-and-facial-recognition/)
+- [Johns Hopkins space security blog (I-XRAY: Harvard students pair Meta Ray-Ban glasses with face search to identify strangers)](https://spacesecurity.wse.jhu.edu/2024/10/05/smart-glasses-leads-to-real-time-doxxing)
+- [The engineer's post (The OpenClaw message storm also hit a spouse who never agreed to the agent)](https://chrisboyd.me/blog/openclaw-meltdown/)

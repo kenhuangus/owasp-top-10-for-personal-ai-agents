@@ -1,4 +1,8 @@
-:root{--bg:#f6f7fb;--surface:#fff;--surface2:#eef0f7;--ink:#0f172a;--ink2:#475569;--line:#e2e5ef;--hero1:#0b1020;--hero2:#1e1b4b;--radius:16px;--shadow:0 1px 2px rgba(15,23,42,.06),0 8px 24px rgba(15,23,42,.06);--a:#4F46E5;--atext:var(--a)}
+:root{--bg:#f6f7fb;--surface:#fff;--surface2:#eef0f7;--ink:#0f172a;--ink2:#475569;--line:#e2e5ef;--hero1:#0b1020;--hero2:#1e1b4b;--radius:16px;--shadow:0 1px 2px rgba(15,23,42,.06),0 8px 24px rgba(15,23,42,.06);--a:#4F46E5}
+/* accent text is resolved where --a is set, so each card and entry page uses its own color */
+:root,[style*="--a"]{--atext:var(--a)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]),:root:not([data-theme=light]) [style*="--a"]{--atext:color-mix(in srgb,var(--a) 45%,#fff)}}
+:root[data-theme=dark],:root[data-theme=dark] [style*="--a"]{--atext:color-mix(in srgb,var(--a) 45%,#fff)}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0b0f1a;--surface:#131a2b;--surface2:#1a2338;--ink:#e8ecf6;--ink2:#a3adc2;--line:#25304a;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35)}}
 :root[data-theme=dark]{--bg:#0b0f1a;--surface:#131a2b;--surface2:#1a2338;--ink:#e8ecf6;--ink2:#a3adc2;--line:#25304a;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}

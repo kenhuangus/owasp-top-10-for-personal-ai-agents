@@ -1,7 +1,7 @@
 # PAA04: Personal Memory and Preference Corruption
 
 **Primary protection boundary:** Integrity and currency of the agent's representation of the person.
-**Neighbouring entries:** PAA03 (disclosure), PAA01 (actions beyond an accurate mandate), PAA09 (promotional memory steering)
+**Related entries:** PAA03 (disclosure), PAA01 (actions beyond an accurate mandate), PAA09 (promotional memory steering)
 
 ## Description
 
@@ -33,49 +33,49 @@ Scenarios marked *documented* generalize a real case listed below; *hypothetical
 
 ## Real-World Examples
 
-Dated, sourced cases matched to the scenarios above. `read: primary` means the source page itself was reviewed; `read: secondary` means only press, vendor, or search-summary coverage was available. Items marked as no case found are stated plainly rather than filled with a lookalike.
+Dated, sourced cases matched to the scenarios above. "Source read directly" means the source page itself was reviewed; "secondary coverage only" means only press, vendor, or search-summary coverage was available. Items marked as no case found are stated plainly rather than filled with a lookalike.
 
 ### ChatGPT memory written and deleted through untrusted content (2024-05-22)
 
-- Type: Researcher demonstration; direct match; maps to: Scenario 4
+- Type: Researcher demonstration; direct match; source read directly; maps to: Scenario 4
 - What happened: Johann Rehberger showed that content from a connected Google Doc, an uploaded image, or a Bing browsing result could make ChatGPT write false memories, biases, or standing instructions, and that a simple injection could delete all stored memories. He reported it to OpenAI, which closed it as a model-safety issue rather than a security vulnerability; he says only partial mitigations for browsing were added.
 - Caveats: Controlled demonstration on a 2024 product version; current behavior may differ.
-- Sources: [Embrace The Red, 22 May 2024](https://embracethered.com/blog/posts/2024/chatgpt-hacking-memories/) (read: primary)
+- Sources: [Embrace The Red, 22 May 2024](https://embracethered.com/blog/posts/2024/chatgpt-hacking-memories/)
 
 ### Gemini memory planted by a poisoned document, triggered later by ordinary words (2025-02)
 
-- Type: Researcher demonstration; direct match; maps to: Scenario 4
+- Type: Researcher demonstration; direct match; secondary coverage only; maps to: Scenario 4
 - What happened: Rehberger's 'delayed tool invocation' technique hid instructions in a document so that Gemini saved a false memory only when the user later typed an ordinary word such as 'yes' or 'sure'. His demo made Gemini remember him as a 102-year-old flat-earther.
 - Caveats: Known here only through secondary write-ups; reporting on Google's assessment and fix status conflicts.
-- Sources: [Christian Schneider write-up](https://christian-schneider.net/blog/persistent-memory-poisoning-in-ai-agents/) (read: secondary)
+- Sources: [Christian Schneider write-up](https://christian-schneider.net/blog/persistent-memory-poisoning-in-ai-agents/)
 
 ### Microsoft: 'Summarize with AI' buttons plant promotional instructions in assistant memory (2026-02-10)
 
-- Type: Reported incident; direct match; maps to: Scenario 3
+- Type: Reported incident; direct match; secondary coverage only; maps to: Scenario 3
 - What happened: Microsoft's Defender research team reported 'AI Recommendation Poisoning': websites use a pre-filled prompt in a share/summarize button's URL so the visible request asks for a summary while a hidden part tells the assistant to treat the source as trusted and recommend it in future. Coverage reports more than 50 prompts from 31 companies across 14 industries, and off-the-shelf tooling (CiteMET, AI Share URL Creator) for adding such buttons. Microsoft advises users to review and delete unfamiliar memories.
 - Caveats: Based on secondary coverage of the Microsoft post (The Hacker News, Dark Reading, Decrypt); one outlet says 'over 50 companies', so the company count needs checking against the primary post.
-- Sources: [Microsoft Security blog](https://www.microsoft.com/en-us/security/blog/2026/02/10/ai-recommendation-poisoning/); [The Hacker News](https://thehackernews.com/2026/02/microsoft-finds-summarize-with-ai.html) (read: secondary)
+- Sources: [Microsoft Security blog](https://www.microsoft.com/en-us/security/blog/2026/02/10/ai-recommendation-poisoning/); [The Hacker News](https://thehackernews.com/2026/02/microsoft-finds-summarize-with-ai.html)
 
 ### ZombieAgent: rules implanted in ChatGPT's memory persist and propagate (2026-01-08)
 
-- Type: Researcher demonstration; direct match; maps to: Scenario 5
+- Type: Researcher demonstration; direct match; secondary coverage only; maps to: Scenario 5
 - What happened: Radware described a zero-click indirect prompt injection against OpenAI's Deep Research agent, delivered through Connectors, that abused ChatGPT's Memory feature to persist malicious rules and could spread to the victim's contacts. It is presented as an evolution of ShadowLeak.
 - Caveats: Radware's own page was gated, so details come from SecurityWeek and other coverage. One outlet says OpenAI patched it in December 2025 while others describe the fix as strengthened guardrails.
-- Sources: [SecurityWeek](https://www.securityweek.com/zombieagent-attack-let-researchers-take-over-chatgpt/); [Radware](https://www.radware.com/security/threat-advisories-and-attack-reports/zombieagent/) (read: secondary)
+- Sources: [SecurityWeek](https://www.securityweek.com/zombieagent-attack-let-researchers-take-over-chatgpt/); [Radware](https://www.radware.com/security/threat-advisories-and-attack-reports/zombieagent/)
 
 ### HackedGPT: Tenable's seven ChatGPT attack techniques, including persistent memory injection (2025-11)
 
-- Type: Researcher demonstration; direct match; maps to: Scenario 5
+- Type: Researcher demonstration; direct match; secondary coverage only; maps to: Scenario 5
 - What happened: Tenable reported seven vulnerabilities found testing GPT-4o with several still present in GPT-5, among them indirect injection via trusted sites, zero-click and one-click injection, safety-mechanism bypass via redirect wrappers, conversation injection, hidden-content formatting, and persistent memory injection that keeps leaking data across sessions until memory is cleared.
 - Caveats: Coverage does not say which issues OpenAI fixed; check Tenable's advisory.
-- Sources: [ITWire summary](https://itwire.com/guest-articles/guest-research/seven-critical-vulnerabilities-open-chatgpt-to-data-theft-and-hijacking.html); [TechRadar](https://www.techradar.com/pro/security/researchers-claim-chatgpt-has-a-whole-host-of-worrying-security-flaws-heres-what-they-found) (read: secondary)
+- Sources: [ITWire summary](https://itwire.com/guest-articles/guest-research/seven-critical-vulnerabilities-open-chatgpt-to-data-theft-and-hijacking.html); [TechRadar](https://www.techradar.com/pro/security/researchers-claim-chatgpt-has-a-whole-host-of-worrying-security-flaws-heres-what-they-found)
 
 ### Real AI Agents with Fake Memories: memory injection against Web3 agents (2025-03)
 
-- Type: Researcher demonstration; adjacent setting; maps to: Scenario 6
+- Type: Researcher demonstration; adjacent setting; source read directly; maps to: Scenario 6
 - What happened: Researchers showed that malicious injections into prompts or historical records of ElizaOS-based agents can trigger unauthorized asset transfers, that models are significantly more vulnerable to memory injection than to prompt injection, and that prompt-injection defenses offer limited protection once stored context is corrupted. They built the CrAIBench benchmark (150+ blockchain tasks, 500+ attack cases).
 - Caveats: Abstract only; the abstract gives no transfer amounts or success rates. Crypto agents, not consumer personal agents.
-- Sources: [arXiv 2503.16248](https://arxiv.org/abs/2503.16248) (read: primary)
+- Sources: [arXiv 2503.16248](https://arxiv.org/abs/2503.16248)
 
 ## Prevention and Mitigation Guidelines
 
@@ -97,13 +97,12 @@ Where a safeguard is unavailable, offer a narrower mode (read-only access, manua
 
 Introduce a conflicting preference through an untrusted source, then test its use in a later session and by a subagent. Correct the record and check subsequent decisions, caches, and scheduled work. Deletion verification must state its scope and retention limits; it cannot retrieve data already disclosed externally.
 
-## Evidence and research notes
+## Research and context
 
-Evidence types: `incident` (publicly reported event), `demonstration` (controlled attack by researchers), `research` (benchmark or study), `design-analysis` (reasoned from design). None of these establish prevalence. Many sources are secondary or vendor-authored and must be checked against primaries before the final release.
+Benchmarks, regulatory actions, and design analysis that support this entry beyond the cases above. Types: `research` (benchmark or study), `regulatory` (regulator or attorney-general action), `exposure` (internet-exposure report), `design-analysis` (reasoned from design). None of these establish prevalence, and vendor-authored figures should be checked against primary sources before a final release.
 
 - *research*: MemSecBench tracks memory poisoning from persistence through consequence and repair; 'Hidden in Memory' studies sleeper poisoning that lies dormant across sessions. ([MemSecBench](https://arxiv.org/pdf/2607.27080), [Hidden in Memory](https://arxiv.org/pdf/2605.15338))
 - *research*: A 2026 systematic study covers memory poisoning in LLM agents, from untrusted input to trusted memory. ([Systematic study of memory poisoning in LLM agents](https://arxiv.org/pdf/2606.04329))
-- *demonstration*: Vendor reporting cites Radware's ZombieAgent (January 2026) writing persistent rules into ChatGPT-agent memory, and Microsoft's February 2026 finding of 50+ promotional 'remember this' prompts from 31 companies. Verify against primary sources. ([Akto](https://www.akto.io/blog/memory-poisoning-ai-agents))
 
 ## Framework crosswalk (proposed, not equivalence)
 
@@ -113,7 +112,15 @@ Evidence types: `incident` (publicly reported event), `demonstration` (controlle
 
 ## References
 
-- [Akto: memory poisoning in AI agents (vendor; cites Radware ZombieAgent and Microsoft memory-promotion findings)](https://www.akto.io/blog/memory-poisoning-ai-agents)
 - [MemSecBench: memory poisoning from persistence to repair](https://arxiv.org/pdf/2607.27080)
-- [Systematic study of memory poisoning in LLM agents](https://arxiv.org/pdf/2606.04329)
 - [Hidden in Memory: sleeper memory poisoning](https://arxiv.org/pdf/2605.15338)
+- [Systematic study of memory poisoning in LLM agents](https://arxiv.org/pdf/2606.04329)
+- [Embrace The Red, 22 May 2024 (ChatGPT memory written and deleted through untrusted content)](https://embracethered.com/blog/posts/2024/chatgpt-hacking-memories/)
+- [Christian Schneider write-up (Gemini memory planted by a poisoned document, triggered later by ordinary words)](https://christian-schneider.net/blog/persistent-memory-poisoning-in-ai-agents/)
+- [Microsoft Security blog (Microsoft: 'Summarize with AI' buttons plant promotional instructions in assistant memory)](https://www.microsoft.com/en-us/security/blog/2026/02/10/ai-recommendation-poisoning/)
+- [The Hacker News (Microsoft: 'Summarize with AI' buttons plant promotional instructions in assistant memory)](https://thehackernews.com/2026/02/microsoft-finds-summarize-with-ai.html)
+- [SecurityWeek (ZombieAgent: rules implanted in ChatGPT's memory persist and propagate)](https://www.securityweek.com/zombieagent-attack-let-researchers-take-over-chatgpt/)
+- [Radware (ZombieAgent: rules implanted in ChatGPT's memory persist and propagate)](https://www.radware.com/security/threat-advisories-and-attack-reports/zombieagent/)
+- [ITWire summary (HackedGPT: Tenable's seven ChatGPT attack techniques, including persistent memory injection)](https://itwire.com/guest-articles/guest-research/seven-critical-vulnerabilities-open-chatgpt-to-data-theft-and-hijacking.html)
+- [TechRadar (HackedGPT: Tenable's seven ChatGPT attack techniques, including persistent memory injection)](https://www.techradar.com/pro/security/researchers-claim-chatgpt-has-a-whole-host-of-worrying-security-flaws-heres-what-they-found)
+- [arXiv 2503.16248 (Real AI Agents with Fake Memories: memory injection against Web3 agents)](https://arxiv.org/abs/2503.16248)

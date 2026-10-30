@@ -38,30 +38,43 @@
   var pk=svg.querySelector('.packet'),sh=svg.querySelector('.shield');
   var cap=fig.querySelector('.cap'),capBox=fig.querySelector('.story-cap'),tag=fig.querySelector('.tag');
   var dots=fig.querySelectorAll('.sdot'),playBtn=fig.querySelector('[data-act=play]');
-  var X=[120,340,560,780],Y=118,pos={},nodes={},idx={};
-  d.n.forEach(function(n,i){
-   pos[n.id]=X[n.s];idx[n.id]=n.s;
-   var g=mk('g',{'class':'node '+n.k,transform:'translate('+X[n.s]+','+Y+')'});
-   g.appendChild(mk('rect',{x:-78,y:-34,width:156,height:68,rx:14}));
-   g.appendChild(mk('circle',{'class':'k',cx:-60,cy:-17,r:5}));
-   var words=n.l.split(' '),l1=n.l,l2='';
-   if(n.l.length>15&&words.length>1){var h=Math.ceil(words.length/2);l1=words.slice(0,h).join(' ');l2=words.slice(h).join(' ')}
-   var t1=mk('text',{x:0,y:l2?-2:6});t1.textContent=l1;g.appendChild(t1);
-   if(l2){var t2=mk('text',{x:0,y:17});t2.textContent=l2;g.appendChild(t2)}
-   ng.appendChild(g);nodes[n.id]=g;
-  });
+  /* wide screens: four nodes in a row; narrow screens: a column, so labels stay readable */
+  var V,P,nodes,idx,edges;
+  function line(x0,y0,x1,y1){return {x0:x0,y0:y0,x1:x1,y1:y1,cx:(x0+x1)/2,cy:(y0+y1)/2}}
   function geo(f,t){
-   var x0=pos[f],x1=pos[t],adj=Math.abs(idx[f]-idx[t])===1;
-   var cy=adj?Y:Y-92,sy=adj?Y:Y-34;
-   if(adj){var sg=x1>x0?1:-1;x0+=sg*86;x1-=sg*86}
-   return {x0:x0,y0:sy,x1:x1,y1:sy,cx:(x0+x1)/2,cy:cy};
+   var a=P[f],b=P[t],adj=Math.abs(idx[f]-idx[t])===1,sg;
+   if(V){
+    if(adj){sg=b.y>a.y?1:-1;return line(a.x,a.y+sg*37,b.x,b.y-sg*37)}
+    return {x0:a.x+115,y0:a.y,x1:b.x+115,y1:b.y,cx:a.x+235,cy:(a.y+b.y)/2};
+   }
+   if(adj){sg=b.x>a.x?1:-1;return line(a.x+sg*86,a.y,b.x-sg*86,b.y)}
+   return {x0:a.x,y0:a.y-34,x1:b.x,y1:b.y-34,cx:(a.x+b.x)/2,cy:a.y-92};
+  }
+  function layout(){
+   V=fig.clientWidth<560;P={};nodes={};idx={};
+   eg.textContent='';ng.textContent='';
+   svg.setAttribute('viewBox',V?'0 0 420 470':'0 0 900 250');
+   d.n.forEach(function(n){
+    var x=V?170:[120,340,560,780][n.s],y=V?64+n.s*112:118,w=V?230:156,h=V?58:68;
+    P[n.id]={x:x,y:y};idx[n.id]=n.s;
+    var g=mk('g',{'class':'node '+n.k,transform:'translate('+x+','+y+')'});
+    g.appendChild(mk('rect',{x:-w/2,y:-h/2,width:w,height:h,rx:14}));
+    g.appendChild(mk('circle',{'class':'k',cx:-w/2+16,cy:-h/2+15,r:5}));
+    var words=n.l.split(' '),l1=n.l,l2='';
+    if(!V&&n.l.length>15&&words.length>1){var k=Math.ceil(words.length/2);l1=words.slice(0,k).join(' ');l2=words.slice(k).join(' ')}
+    var t1=mk('text',{x:0,y:l2?-2:6});t1.textContent=l1;g.appendChild(t1);
+    if(l2){var t2=mk('text',{x:0,y:17});t2.textContent=l2;g.appendChild(t2)}
+    ng.appendChild(g);nodes[n.id]=g;
+   });
+   edges=d.s.map(function(s){
+    var g=geo(s.f,s.t),p=mk('path',{'class':'edge',d:'M'+g.x0+' '+g.y0+' Q'+g.cx+' '+g.cy+' '+g.x1+' '+g.y1});
+    eg.appendChild(p);return {el:p,g:g};
+   });
   }
   function bez(g,t){var u=1-t;return [u*u*g.x0+2*u*t*g.cx+t*t*g.x1,u*u*g.y0+2*u*t*g.cy+t*t*g.y1]}
-  var edges=d.s.map(function(s){
-   var g=geo(s.f,s.t),p=mk('path',{'class':'edge',d:'M'+g.x0+' '+g.y0+' Q'+g.cx+' '+g.cy+' '+g.x1+' '+g.y1});
-   eg.appendChild(p);return {el:p,g:g};
-  });
-  var cur=-1,raf=0,timer=0,playing=!reduce,visible=false;
+  layout();
+  var cur=-1,raf=0,timer=0,playing=!reduce,visible=false,rz=0;
+  window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(function(){if((fig.clientWidth<560)!==V){layout();show(cur<0?0:cur)}},150)});
   function setPlay(on){playing=on;playBtn.setAttribute('aria-pressed',on?'true':'false');playBtn.textContent=on?'Pause':'Play';playBtn.setAttribute('aria-label',on?'Pause animation':'Play animation');schedule()}
   function schedule(){clearTimeout(timer);if(playing&&visible&&!reduce)timer=setTimeout(function(){show((cur+1)%d.s.length)},4300)}
   function show(i){
@@ -69,9 +82,6 @@
    edges.forEach(function(x){x.el.setAttribute('class','edge')});
    for(var id in nodes)nodes[id].setAttribute('class',nodes[id].getAttribute('class').replace(/ (hit|ok-hit|bad-hit|guard-hit)/g,''));
    e.el.setAttribute('class','edge on '+s.k);
-   if(s.k==='guard'){
-    /* show the offending path of the previous step as faint context */
-   }
    cap.textContent=s.x;
    capBox.setAttribute('class','story-cap '+(s.k==='ok'?'':s.k));
    tag.textContent=(s.k==='bad'?'Boundary crossed':s.k==='guard'?'Control holds':'Normal flow')+' · '+(i+1)+'/'+d.s.length;
@@ -95,6 +105,6 @@
   dots.forEach(function(x,j){x.addEventListener('click',function(){setPlay(false);show(j)})});
   show(0);
   setPlay(playing);
-  if('IntersectionObserver' in window){new IntersectionObserver(function(es){visible=es[0].isIntersecting;if(visible){show(0)}else{clearTimeout(timer)}schedule()},{threshold:.45}).observe(fig)}else{visible=true;schedule()}
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){visible=es[0].isIntersecting;if(!visible)clearTimeout(timer);schedule()},{threshold:.45}).observe(fig)}else{visible=true;schedule()}
  });
 })();

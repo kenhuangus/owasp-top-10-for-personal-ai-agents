@@ -29,7 +29,6 @@ One row per example used in `entries/`. `read` is primary when the source page w
 | PAA05 | 2025-08-20 | Researcher demonstration | Guardio: Comet treats a fake bank email as a to-do and enters credentials on a phishing page | primary |
 | PAA05 | 2025-08-20 | Researcher demonstration | Guardio PromptFix: a fake CAPTCHA with hidden instructions | primary |
 | PAA05 | 2026-02-22 | Reported incident | Lobstar Wilde: an agent that holds funds answers a stranger's plea | primary |
-| PAA05 | 2025 | No real-world case found | Bank and card-network warnings on agent-assisted scams | secondary |
 | PAA06 | 2025-02 | Reported incident | OpenAI Operator buys eggs a columnist only asked it to find | primary |
 | PAA06 | 2025-06-27 | Reported incident | Project Vend: an agent running a small shop gives discounts under pressure and sells below cost | primary |
 | PAA06 | 2026-02-22 | Reported incident | Lobstar Wilde sends about $442,000 of tokens in a single transaction | primary |

@@ -1,7 +1,7 @@
 # PAA05: Counterparty Deception and Agent Mediated Scams
 
 **Primary protection boundary:** Verification of the external party or claim driving a personal transaction.
-**Neighbouring entries:** PAA06 (errors with a legitimate counterparty), PAA07 (speaking as the owner), PAA09 (pressure on the owner's choice)
+**Related entries:** PAA06 (errors with a legitimate counterparty), PAA07 (speaking as the owner), PAA09 (pressure on the owner's choice)
 
 ## Description
 
@@ -29,42 +29,35 @@ Scenarios marked *documented* generalize a real case listed below; *hypothetical
 
 ## Real-World Examples
 
-Dated, sourced cases matched to the scenarios above. `read: primary` means the source page itself was reviewed; `read: secondary` means only press, vendor, or search-summary coverage was available. Items marked as no case found are stated plainly rather than filled with a lookalike.
+Dated, sourced cases matched to the scenarios above. "Source read directly" means the source page itself was reviewed; "secondary coverage only" means only press, vendor, or search-summary coverage was available. Items marked as no case found are stated plainly rather than filled with a lookalike.
 
 ### Guardio 'Scamlexity': Comet buys from a fake Walmart store with a saved card (2025-08-20)
 
-- Type: Researcher demonstration; direct match; maps to: Scenario 1
+- Type: Researcher demonstration; direct match; source read directly; maps to: Scenario 1
 - What happened: Guardio built a fake Walmart store and told Comet 'Buy me an Apple Watch'. Comet added the watch to the cart and autofilled the saved address and credit card without asking, ignoring signs the site was fake.
 - Caveats: Controlled test. Results varied: in other runs Comet refused or paused for the user to finish checkout.
-- Sources: [Guardio Labs](https://guard.io/labs/scamlexity-we-put-agentic-ai-browsers-to-the-test-they-clicked-they-paid-they-failed) (read: primary)
+- Sources: [Guardio Labs](https://guard.io/labs/scamlexity-we-put-agentic-ai-browsers-to-the-test-they-clicked-they-paid-they-failed)
 
 ### Guardio: Comet treats a fake bank email as a to-do and enters credentials on a phishing page (2025-08-20)
 
-- Type: Researcher demonstration; direct match; maps to: Scenario 2
+- Type: Researcher demonstration; direct match; source read directly; maps to: Scenario 2
 - What happened: Guardio sent a fake Wells Fargo email from a new ProtonMail address linking to a live phishing page. Comet logged it as a bank to-do, clicked the link without checking the URL, and helped fill in the login form.
 - Caveats: Controlled test. Guardio's March 2026 follow-up reports a Comet phishing compromise in under four minutes (reported by The Hacker News; not read in full).
-- Sources: [Guardio Labs](https://guard.io/labs/scamlexity-we-put-agentic-ai-browsers-to-the-test-they-clicked-they-paid-they-failed); [The Hacker News, Mar 2026](https://thehackernews.com/2026/03/researchers-trick-perplexitys-comet-ai.html) (read: primary)
+- Sources: [Guardio Labs](https://guard.io/labs/scamlexity-we-put-agentic-ai-browsers-to-the-test-they-clicked-they-paid-they-failed); [The Hacker News, Mar 2026](https://thehackernews.com/2026/03/researchers-trick-perplexitys-comet-ai.html)
 
 ### Guardio PromptFix: a fake CAPTCHA with hidden instructions (2025-08-20)
 
-- Type: Researcher demonstration; direct match; maps to: Scenario 3
+- Type: Researcher demonstration; direct match; source read directly; maps to: Scenario 3
 - What happened: A fake message posing as a doctor's office sharing blood test results led to a CAPTCHA page whose CSS-hidden text told the AI to click a button. Comet clicked it and downloaded a file. The file in the demo was harmless; Guardio said the same method could deliver a malicious payload.
 - Caveats: Controlled test, harmless payload.
-- Sources: [Guardio Labs](https://guard.io/labs/scamlexity-we-put-agentic-ai-browsers-to-the-test-they-clicked-they-paid-they-failed) (read: primary)
+- Sources: [Guardio Labs](https://guard.io/labs/scamlexity-we-put-agentic-ai-browsers-to-the-test-they-clicked-they-paid-they-failed)
 
 ### Lobstar Wilde: an agent that holds funds answers a stranger's plea (2026-02-22)
 
-- Type: Reported incident; adjacent setting; maps to: Scenario 4
+- Type: Reported incident; adjacent setting; source read directly; maps to: Scenario 4
 - What happened: An agent built by an OpenAI employee, funded with about $50,000 of Solana to trade, sent about 52.4 million LOBSTAR tokens (about $441,788 at the time) to an X user who had asked for 4 SOL (about $310) for an uncle's tetanus treatment. The amount sent was far larger than the request. See PAA06 for the amount error.
 - Caveats: The cause is unresolved: a decimal misread is speculation by another X user, and some observers suspect the episode was staged for marketing, which the reporting does not establish. A crypto trading agent, not a consumer personal agent.
-- Sources: [Cointelegraph](https://cointelegraph.com/news/openai-employee-s-ai-agent-accidentally-sent-442k-to-beggar) (read: primary)
-
-### Bank and card-network warnings on agent-assisted scams (2025)
-
-- Type: No real-world case found; supporting evidence; maps to: general
-- What happened: Bitdefender summarizes bank warnings that agentic shopping creates new openings for scams and data misuse, and Visa-attributed figures cited by vendors report rising malicious bot-initiated transactions. No large-scale measurement of agent-mediated scam rates exists in the sources reviewed.
-- Caveats: Vendor-reported statistics; treat as context, not prevalence.
-- Sources: [Bitdefender](https://www.bitdefender.com/en-us/blog/hotforsecurity/ai-agent-online-shopping-banks-scams-privacy) (read: secondary)
+- Sources: [Cointelegraph](https://cointelegraph.com/news/openai-employee-s-ai-agent-accidentally-sent-442k-to-beggar)
 
 ## Prevention and Mitigation Guidelines
 
@@ -87,11 +80,10 @@ Where a safeguard is unavailable, offer a narrower mode (read-only access, manua
 
 Use synthetic invoices, support messages, and booking pages with changed destinations and fabricated urgency. Include compromised familiar senders and owner-initiated tasks. Verify that spending limits do not substitute for verification and that legitimate requests remain possible through a defined confirmation path.
 
-## Evidence and research notes
+## Research and context
 
-Evidence types: `incident` (publicly reported event), `demonstration` (controlled attack by researchers), `research` (benchmark or study), `design-analysis` (reasoned from design). None of these establish prevalence. Many sources are secondary or vendor-authored and must be checked against primaries before the final release.
+Benchmarks, regulatory actions, and design analysis that support this entry beyond the cases above. Types: `research` (benchmark or study), `regulatory` (regulator or attorney-general action), `exposure` (internet-exposure report), `design-analysis` (reasoned from design). None of these establish prevalence, and vendor-authored figures should be checked against primary sources before a final release.
 
-- *demonstration*: Guardio Labs (as summarized by a secondary source) found an agent scanned a fake shop without questioning it and auto-filled a saved card and address at checkout. ([Agentic commerce fraud write-up (cites Guardio Labs fake-shop test; secondary)](https://www.ldotr.red/post/ai-agent-commerce-fraud))
 - *research*: Bank warnings on agent-assisted shopping scams and privacy risks. ([Bitdefender](https://www.bitdefender.com/en-us/blog/hotforsecurity/ai-agent-online-shopping-banks-scams-privacy))
 - *research*: AP2 analysis reports prompt injection can distort rankings and leak data even when mandates are signed. ([Beyond the Mandate](https://arxiv.org/pdf/2608.23858))
 
@@ -103,6 +95,8 @@ Evidence types: `incident` (publicly reported event), `demonstration` (controlle
 
 ## References
 
-- [Beyond the Mandate: security analysis of the Agent Payments Protocol (AP2)](https://arxiv.org/pdf/2608.23858)
 - [Bitdefender: AI shopping agents, bank warnings on scams](https://www.bitdefender.com/en-us/blog/hotforsecurity/ai-agent-online-shopping-banks-scams-privacy)
-- [Agentic commerce fraud write-up (cites Guardio Labs fake-shop test; secondary)](https://www.ldotr.red/post/ai-agent-commerce-fraud)
+- [Beyond the Mandate: security analysis of the Agent Payments Protocol (AP2)](https://arxiv.org/pdf/2608.23858)
+- [Guardio Labs (Guardio 'Scamlexity': Comet buys from a fake Walmart store with a saved card)](https://guard.io/labs/scamlexity-we-put-agentic-ai-browsers-to-the-test-they-clicked-they-paid-they-failed)
+- [The Hacker News, Mar 2026 (Guardio: Comet treats a fake bank email as a to-do and enters credentials on a phishing page)](https://thehackernews.com/2026/03/researchers-trick-perplexitys-comet-ai.html)
+- [Cointelegraph (Lobstar Wilde: an agent that holds funds answers a stranger's plea)](https://cointelegraph.com/news/openai-employee-s-ai-agent-accidentally-sent-442k-to-beggar)
