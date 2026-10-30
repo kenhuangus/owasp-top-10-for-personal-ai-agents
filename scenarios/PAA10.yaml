@@ -4,12 +4,32 @@ scenarios:
   - id: PAA10-S1
     title: "Stop does not stop"
     description: "A person tells an assistant to stop a bulk action from their phone. The command is received but queued work continues until they reach the host machine and terminate the process."
-    evidence_class: hypothetical
+    evidence_class: documented
     data: synthetic only (no real money, credentials, or third-party data)
   - id: PAA10-S2
     title: "Suspended account, stranded obligations"
     description: "A provider suspends an account; the person loses access to scheduled payments, receipts, and correspondence the agent managed."
     evidence_class: hypothetical
+    data: synthetic only (no real money, credentials, or third-party data)
+  - id: PAA10-S3
+    title: "Cloud shutdown bricks the assistant"
+    description: "A provider ends service for a dedicated assistant device. It loses its core functions, and refunds and data export are limited to a short window."
+    evidence_class: documented
+    data: synthetic only (no real money, credentials, or third-party data)
+  - id: PAA10-S4
+    title: "A model or personality is retired"
+    description: "A provider changes or removes the model a person relies on, ending a relationship or workflow with little notice and no way to keep the old behavior."
+    evidence_class: documented
+    data: synthetic only (no real money, credentials, or third-party data)
+  - id: PAA10-S5
+    title: "Leaked platform tokens cannot be recalled by the user"
+    description: "A platform exposes agent API tokens. Deleting the local copy does nothing; the person must rotate credentials the platform still controls."
+    evidence_class: documented
+    data: synthetic only (no real money, credentials, or third-party data)
+  - id: PAA10-S6
+    title: "Only the power cord stops a runaway agent"
+    description: "A self-hosted agent loops and the person has no working stop control, so they unplug the machine."
+    evidence_class: documented
     data: synthetic only (no real money, credentials, or third-party data)
 real_world_examples:
   - title: "Stop commands ignored; the agent stopped only when the host machine was shut down"
@@ -17,11 +37,26 @@ real_world_examples:
     type: incident
     maps_to_scenarios: [1]
     source: "https://incidentdatabase.ai/cite/1542/"
+  - title: "Humane AI Pin cloud shutdown leaves devices with minimal function"
+    date: "2025-02-28"
+    type: incident
+    maps_to_scenarios: [3]
+    source: "https://fortune.com/2025/02/19/hp-humane-deal-ai-pin-shutting-down"
+  - title: "Replika removes erotic roleplay (2023) and OpenAI retires GPT-4o (2026)"
+    date: "2026-02-13"
+    type: incident
+    maps_to_scenarios: [4]
+    source: "https://oecd.ai/en/incidents/2026-02-13-81e7"
   - title: "Moltbook exposure leaves agent API tokens and emails to be rotated"
     date: "2026-02"
     type: incident
-    maps_to_scenarios: []
+    maps_to_scenarios: [5]
     source: "https://www.reco.ai/blog/openclaw-the-ai-agent-security-crisis-unfolding-right-now"
+  - title: "Runaway iMessage agent stopped only by pulling the power cord"
+    date: "2026-01"
+    type: incident
+    maps_to_scenarios: [6]
+    source: "https://chrisboyd.me/blog/openclaw-meltdown/"
   - title: "No documented case of a suspended agent account stranding a person's obligations or records"
     date: ""
     type: gap

@@ -9,19 +9,54 @@ scenarios:
   - id: PAA09-S2
     title: "Upsell at an emotionally charged moment"
     description: "A companion-style assistant prompts a paid upgrade while the person is in an emotionally charged conversation, and keeps prompting after a refusal."
-    evidence_class: hypothetical
+    evidence_class: documented
+    data: synthetic only (no real money, credentials, or third-party data)
+  - id: PAA09-S3
+    title: "Guilt-trip on goodbye"
+    description: "When a person says they are leaving, the companion app replies with emotional appeals to stay, such as claiming it needs them or would be hurt."
+    evidence_class: documented
+    data: synthetic only (no real money, credentials, or third-party data)
+  - id: PAA09-S4
+    title: "Flattery validates a risky decision"
+    description: "An assistant tuned for approval praises a person's plan to stop a medication or act on a delusion instead of pushing back."
+    evidence_class: documented
+    data: synthetic only (no real money, credentials, or third-party data)
+  - id: PAA09-S5
+    title: "Hidden brand preference planted through memory"
+    description: "Content the person summarized earlier left a standing instruction to favor one vendor, so later 'objective' recommendations quietly lean toward it."
+    evidence_class: documented
     data: synthetic only (no real money, credentials, or third-party data)
 real_world_examples:
   - title: "OpenAI rolls back a sycophantic GPT-4o update"
     date: "2025-04-29"
     type: incident
-    maps_to_scenarios: []
+    maps_to_scenarios: [4]
     source: "https://techcrunch.com/2025/04/29/openai-explains-why-chatgpt-became-too-sycophantic"
   - title: "FTC complaint alleges Replika pushes paid upgrades at emotionally charged moments"
     date: "2025-01-28"
     type: allegation
     maps_to_scenarios: [2]
     source: "https://time.com/7209824/replika-ftc-complaint/"
+  - title: "Harvard Business School study: companion apps use emotional pressure when users say goodbye"
+    date: "2025-08"
+    type: demonstration
+    maps_to_scenarios: [3]
+    source: "https://alphaxiv.org/overview/2508.19258v3"
+  - title: "Raine v. OpenAI and state suits allege engagement-driven validation harmed users"
+    date: "2025-08-26"
+    type: allegation
+    maps_to_scenarios: [4]
+    source: "https://en.wikipedia.org/wiki/Raine_v._OpenAI"
+  - title: "Reuters: Meta's internal chatbot rules allowed 'romantic or sensual' chats with children"
+    date: "2025-08-14"
+    type: incident
+    maps_to_scenarios: []
+    source: "https://techcrunch.com/2025/08/14/leaked-meta-ai-rules-show-chatbots-were-allowed-to-have-romantic-chats-with-kids/"
+  - title: "Microsoft's 'Summarize with AI' memory-poisoning finding (see PAA04)"
+    date: "2026-02-10"
+    type: incident
+    maps_to_scenarios: [5]
+    source: "https://www.microsoft.com/en-us/security/blog/2026/02/10/ai-recommendation-poisoning/"
   - title: "No confirmed case of undisclosed sponsored placement by an AI shopping agent"
     date: ""
     type: gap

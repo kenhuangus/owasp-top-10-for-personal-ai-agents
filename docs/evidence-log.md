@@ -33,8 +33,7 @@ Sources gathered for the first draft. Treat every entry as a lead: several are v
 
 ## Known gaps
 
-- No documented production incident yet for PAA07 (social representation); evidence is design analysis.
+- PAA07 (social representation): the closest cases are an agent publishing an attack post and a messaging loop; no consumer harm from a draft-turned-send or invented commitment is documented.
 - PAA08 evidence is adjacent (bystander privacy, partner tracking, multi-user agent leakage); shared household assistants need primary research.
 - Sponsored-recommendation manipulation (PAA09) has regulatory and companion-chatbot evidence but few agent-specific demonstrations.
 - Agentic-commerce scam rates are unmeasured; current evidence is proofs of concept and vendor telemetry.
-- The official Agentic Top 10 PDF could not be retrieved in the drafting session, so the entry layout follows the commonly used OWASP Top 10 pattern (Description, Common Examples, Attack Scenarios, Prevention and Mitigation, References); confirm against the published ASI document.

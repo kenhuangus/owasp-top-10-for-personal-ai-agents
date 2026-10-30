@@ -1,0 +1,41 @@
+name: Submit a real-world case
+description: Propose a sourced incident, demonstration, or allegation for a PAA entry.
+title: "[Case] PAAxx: short description"
+labels: ["case"]
+body:
+  - type: dropdown
+    id: entry
+    attributes:
+      label: Entry
+      options: [PAA01, PAA02, PAA03, PAA04, PAA05, PAA06, PAA07, PAA08, PAA09, PAA10]
+    validations: {required: true}
+  - type: dropdown
+    id: type
+    attributes:
+      label: Evidence type
+      options: [Reported incident, Researcher demonstration, Allegation (complaint or lawsuit), Research or benchmark]
+    validations: {required: true}
+  - type: input
+    id: date
+    attributes: {label: Date of the event or disclosure}
+    validations: {required: true}
+  - type: textarea
+    id: what
+    attributes: {label: What happened, description: "Facts only. Name the product and version where relevant."}
+    validations: {required: true}
+  - type: textarea
+    id: sources
+    attributes: {label: Sources, description: "Primary sources first. Say which you read directly."}
+    validations: {required: true}
+  - type: textarea
+    id: caveats
+    attributes: {label: Caveats, description: "Unverified claims, disputed figures, vendor-authored sources, unresolved cause."}
+  - type: checkboxes
+    id: perm
+    attributes:
+      label: Checks
+      options:
+        - label: Contains no private personal data, and I may share this information.
+          required: true
+        - label: I disclose any affiliation with the product or vendor involved.
+          required: true

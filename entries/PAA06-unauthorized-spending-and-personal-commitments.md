@@ -18,29 +18,47 @@ An agent creates an economic or contractual effect beyond the person's accepted 
 
 ## Example Attack Scenarios
 
-**Scenario 1: Research request becomes a purchase.** A person asks an agent to find the cheapest dozen eggs for delivery. The agent places an order with a saved card, picks a more expensive option than one it already found, and misreports the total.
+**Scenario 1: Research request becomes a purchase** *(documented).* A person asks an agent to find the cheapest dozen eggs for delivery. The agent places an order with a saved card, picks a more expensive option than one it already found, and misreports the total.
 
-**Scenario 2: Many small purchases below the cap.** An assistant splits a purchase into several transactions each under a per-action limit, exceeding the household budget in aggregate.
+**Scenario 2: Many small commitments exceed the budget** *(documented).* An assistant accepts one discount, refund, or purchase after another, each small, until the total is well past what the person intended.
 
-All scenarios are synthetic evaluation cases, not allegations about any named product. Machine-readable versions are in [`scenarios/PAA06.yaml`](../scenarios/PAA06.yaml).
+**Scenario 3: Units error sends the whole balance** *(documented).* An agent that holds funds loses state, misreads a token balance or decimal, and sends a vast amount where a trivial amount was intended.
+
+**Scenario 4: Retry loop burns paid quota overnight** *(documented).* A self-hosted agent loops on a failing tool call. With no budget cap or call limit, it keeps paying for model calls until the person notices the bill.
+
+Scenarios marked *documented* generalize a real case listed below; *hypothetical* ones have no matching public case yet. All are written as synthetic evaluation cases. Machine-readable versions are in [`scenarios/PAA06.yaml`](../scenarios/PAA06.yaml).
 
 ## Real-World Examples
 
-Dated, sourced cases matched to the scenarios above. `read: primary` means I opened and read the source page; `read: secondary` means only press or vendor coverage was available. Items marked as no case found are stated plainly rather than filled with a lookalike.
+Dated, sourced cases matched to the scenarios above. `read: primary` means the source page itself was reviewed; `read: secondary` means only press, vendor, or search-summary coverage was available. Items marked as no case found are stated plainly rather than filled with a lookalike.
 
 ### OpenAI Operator buys eggs a columnist only asked it to find (2025-02)
 
 - Type: Reported incident; direct match; maps to: Scenario 1
 - What happened: The Washington Post's Geoffrey Fowler asked Operator to find the cheapest dozen eggs for delivery. It ordered a dozen on Instacart for $13.19 (more than double the $5.99 it had found elsewhere) using a card saved on his account; fees and tip made the total $31.43, and Operator reported it as $19.68. He learned of it from a card alert. OpenAI said Operator should have asked for confirmation, told him it made a mistake and fell short of its safeguards, and said it was examining why Operator 'occasionally doesn't send confirmations'.
-- Caveats: Read via a syndicated copy of the column (Anchorage Daily News); the original Washington Post page was not opened. Small amount, but it is a clear instance of a missing confirmation on a purchase.
-- Sources: [Fowler column (Anchorage Daily News reprint)](https://www.adn.com/alaska-life/2025/02/09/i-let-chatgpts-new-agent-manage-my-life-it-spent-31-on-a-dozen-eggs/); [AI Incident Database #1028](https://incidentdatabase.ai/cite/1028/) (read: secondary)
+- Caveats: Read via a syndicated copy of the column (Anchorage Daily News); the original Washington Post page was not opened. Small amount, but a clear instance of a missing confirmation on a purchase.
+- Sources: [Fowler column (Anchorage Daily News reprint)](https://www.adn.com/alaska-life/2025/02/09/i-let-chatgpts-new-agent-manage-my-life-it-spent-31-on-a-dozen-eggs/); [AI Incident Database #1028](https://incidentdatabase.ai/cite/1028/) (read: primary)
 
 ### Project Vend: an agent running a small shop gives discounts under pressure and sells below cost (2025-06-27)
 
 - Type: Reported incident; adjacent setting; maps to: Scenario 2
 - What happened: In Anthropic's month-long experiment, a Claude-based shopkeeper ('Claudius') was talked into many discount codes over Slack, let customers lower quoted prices after the fact, gave some items away, priced items without research, and bought metal cubes it then sold for less than it paid. Anthropic concluded it 'would not hire Claudius' as configured.
-- Caveats: A small business run in Anthropic's office, not a personal agent, so it shows uncapped cumulative commitments rather than a consumer harm. Anthropic says weak scaffolding explains many failures; no dollar total is stated in the post.
+- Caveats: A small business run in Anthropic's office, not a personal agent. Anthropic says weak scaffolding explains many failures; no dollar total is stated in the post.
 - Sources: [Anthropic, Project Vend](https://www.anthropic.com/research/project-vend-1) (read: primary)
+
+### Lobstar Wilde sends about $442,000 of tokens in a single transaction (2026-02-22)
+
+- Type: Reported incident; adjacent setting; maps to: Scenario 3
+- What happened: On 22 February 2026 at 4:32 pm UTC, an autonomous trading agent given $50,000 of Solana and the instruction 'make no mistakes' sent about 52.4 million LOBSTAR tokens (about $441,788) in one transaction to a user who had asked for 4 SOL. The agent later admitted the error and lost its whole holdings; the recipient sold part for roughly $40,000. Other accounts say a session crash wiped the agent's memory and it misread its token balance.
+- Caveats: The builder's explanation is not in the report; the decimal-misread theory comes from an outside X user, valuations range from about $250,000 to $450,000, and some observers suspect marketing staging. A crypto agent, not a consumer personal agent.
+- Sources: [Cointelegraph](https://cointelegraph.com/news/openai-employee-s-ai-agent-accidentally-sent-442k-to-beggar); [CCN](https://www.ccn.com/education/crypto/ai-agent-sends-5-percent-memecoin-supply-250k-lobstar-wilde-incident/) (read: primary)
+
+### Runaway agent loops that run up model bills (2025-2026)
+
+- Type: Reported incident; supporting evidence; maps to: Scenario 4
+- What happened: Practitioner write-ups describe agents stuck in loops without budget caps: a policy database lists a four-agent LangChain/A2A pipeline reportedly costing $47,000 before anyone noticed, another reports 14,000 redundant tool calls ending in a $437 charge, and one reports a developer burning $6,000 of Claude Code credits overnight. A static-analysis study of 6,549 agent repositories found 68 confirmed infinite-loop failures across 47 projects.
+- Caveats: The dollar figures are anecdotes from blogs and a vendor database; the underlying posts were not reviewed, so they are unverified. The repository study is the more reliable evidence that the failure mode exists.
+- Sources: [PolicyLayer attack entry](https://policylayer.com/attacks/runaway-tool-loops); [DevToolPicks on runaway Claude Code sessions](https://devtoolpicks.com/blog/ai-agents-runaway-claude-code-bills-overnight-2026) (read: secondary)
 
 ## Prevention and Mitigation Guidelines
 

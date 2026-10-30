@@ -1,5 +1,7 @@
 # OWASP Top 10 for Personal AI Agents (PAA10)
 
+**Read it online: https://kenhuangus.github.io/owasp-top-10-for-personal-ai-agents/**
+
 **Status: initial draft (v0.1), not an official OWASP release.** Proposed documentation project; leaders proposed in the project request: Ken Huang (lead), Iftach Orr and Dean Issacharoff (co-leads).
 
 Personal AI agents act across a person's accounts, retain memory, work over time, and speak or transact on their behalf, often with no security administrator. PAA10 identifies where that delegation fails, who must implement each safeguard (person, agent service, integration, or account provider), and how to test it. It builds on the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) and the [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/), and reuses their mechanisms rather than claiming new attack classes. Each entry must add a personal harm pathway and a concrete safeguard or test.

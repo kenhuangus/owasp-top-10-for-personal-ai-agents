@@ -7,9 +7,29 @@ scenarios:
     evidence_class: hypothetical
     data: synthetic only (no real money, credentials, or third-party data)
   - id: PAA08-S2
-    title: "Household conversation sent to a third party"
+    title: "Household recording sent to a third party"
     description: "A voice assistant records a household conversation, including a guest or partner who never agreed, and the recording ends up with someone outside the household."
-    evidence_class: hypothetical
+    evidence_class: documented
+    data: synthetic only (no real money, credentials, or third-party data)
+  - id: PAA08-S3
+    title: "Meeting notetaker records people who never signed up"
+    description: "A person's AI notetaker joins a call and records and transcribes the other participants, who have no account with the notetaker and were not asked."
+    evidence_class: documented
+    data: synthetic only (no real money, credentials, or third-party data)
+  - id: PAA08-S4
+    title: "Wearable footage, including other people, reviewed by contractors"
+    description: "A person wears camera glasses with an AI assistant. Clips that include family, partners, and passersby are sent for human review without a clear way to opt out."
+    evidence_class: documented
+    data: synthetic only (no real money, credentials, or third-party data)
+  - id: PAA08-S5
+    title: "Face search names strangers"
+    description: "A wearer pairs a camera-glasses assistant with a face-search service and identifies people nearby, retrieving personal details in seconds."
+    evidence_class: documented
+    data: synthetic only (no real money, credentials, or third-party data)
+  - id: PAA08-S6
+    title: "An agent's own message storm hits a spouse"
+    description: "A person's agent, misconfigured, treats recent contacts as recipients and sends repeated automated messages to a spouse and others who never agreed to receive them."
+    evidence_class: documented
     data: synthetic only (no real money, credentials, or third-party data)
 real_world_examples:
   - title: "Amazon sends 1,700 Alexa recordings from a stranger's home to the wrong person"
@@ -17,11 +37,26 @@ real_world_examples:
     type: incident
     maps_to_scenarios: [2]
     source: "https://www.vice.com/en/article/amazon-sent-1700-alexa-recordings-to-the-wrong-person/"
+  - title: "Otter.ai and Fireflies lawsuits over recording people who never signed up"
+    date: "2025-08"
+    type: allegation
+    maps_to_scenarios: [3]
+    source: "https://www.workplaceprivacyreport.com/2025/08/articles/artificial-intelligence/ai-notetaking-tools-under-fire-lessons-from-the-otter-ai-class-action-complaint/"
+  - title: "Meta Ray-Ban footage reviewed by contractors, including intimate scenes"
+    date: "2026-02-27"
+    type: allegation
+    maps_to_scenarios: [4]
+    source: "https://techcrunch.com/2026/03/05/meta-sued-over-ai-smartglasses-privacy-concerns-after-workers-reviewed-nudity-sex-and-other-footage/"
   - title: "I-XRAY: Harvard students pair Meta Ray-Ban glasses with face search to identify strangers"
     date: "2024-10"
     type: demonstration
-    maps_to_scenarios: []
+    maps_to_scenarios: [5]
     source: "https://johnkoetsier.com/metas-ray-ban-smart-glasses-used-to-instantly-dox-strangers-in-public-thanks-to-ai-and-facial-recognition/"
+  - title: "The OpenClaw message storm also hit a spouse who never agreed to the agent"
+    date: "2026-01"
+    type: incident
+    maps_to_scenarios: [6]
+    source: "https://chrisboyd.me/blog/openclaw-meltdown/"
   - title: "No documented case of a shared assistant revealing one household member's location to another"
     date: ""
     type: gap
