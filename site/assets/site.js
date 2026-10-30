@@ -53,6 +53,7 @@
   function geo(f,t){
    var x0=pos[f],x1=pos[t],adj=Math.abs(idx[f]-idx[t])===1;
    var cy=adj?Y:Y-92,sy=adj?Y:Y-34;
+   if(adj){var sg=x1>x0?1:-1;x0+=sg*86;x1-=sg*86}
    return {x0:x0,y0:sy,x1:x1,y1:sy,cx:(x0+x1)/2,cy:cy};
   }
   function bez(g,t){var u=1-t;return [u*u*g.x0+2*u*t*g.cx+t*t*g.x1,u*u*g.y0+2*u*t*g.cy+t*t*g.y1]}
