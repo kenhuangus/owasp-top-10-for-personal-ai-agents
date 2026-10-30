@@ -1,0 +1,156 @@
+{
+  "version": "0.1-draft",
+  "targets": {
+    "asi": "OWASP Top 10 for Agentic Applications 2026",
+    "llm": "OWASP Top 10 for LLM Applications 2025"
+  },
+  "entries": [
+    {
+      "id": "PAA01",
+      "name": "Personal Mandate Drift",
+      "boundary": "The person's current authorization and its duration.",
+      "asi": [
+        "ASI01",
+        "ASI02",
+        "ASI03"
+      ],
+      "llm2025": [
+        "LLM06"
+      ],
+      "focus": "Continuing consent, expiry, and withdrawal of a personal mandate."
+    },
+    {
+      "id": "PAA02",
+      "name": "Personal Account and Recovery Takeover",
+      "boundary": "Control of accounts, credentials, sessions, and recovery channels.",
+      "asi": [
+        "ASI03",
+        "ASI04",
+        "ASI05"
+      ],
+      "llm2025": [
+        "LLM01",
+        "LLM03",
+        "LLM06"
+      ],
+      "focus": "Concentrated account access and independent recovery."
+    },
+    {
+      "id": "PAA03",
+      "name": "Private Life Context Exposure",
+      "boundary": "Permitted flow of personal information across audiences and purposes.",
+      "asi": [
+        "ASI03",
+        "ASI06",
+        "ASI07"
+      ],
+      "llm2025": [
+        "LLM02",
+        "LLM08"
+      ],
+      "focus": "Boundaries between private life, work, and personal audiences."
+    },
+    {
+      "id": "PAA04",
+      "name": "Personal Memory and Preference Corruption",
+      "boundary": "Integrity and currency of the agent's representation of the person.",
+      "asi": [
+        "ASI06"
+      ],
+      "llm2025": [
+        "LLM04",
+        "LLM01",
+        "LLM08"
+      ],
+      "focus": "Accuracy and correction of the agent's representation of its owner."
+    },
+    {
+      "id": "PAA05",
+      "name": "Counterparty Deception and Agent Mediated Scams",
+      "boundary": "Verification of the external party or claim driving a personal transaction.",
+      "asi": [
+        "ASI01",
+        "ASI02",
+        "ASI09"
+      ],
+      "llm2025": [
+        "LLM01",
+        "LLM09"
+      ],
+      "focus": "Consumer verification of counterparties and payment claims."
+    },
+    {
+      "id": "PAA06",
+      "name": "Unauthorized Spending and Personal Commitments",
+      "boundary": "The exact economic or contractual effect accepted by the person.",
+      "asi": [
+        "ASI02",
+        "ASI03",
+        "ASI08"
+      ],
+      "llm2025": [
+        "LLM06",
+        "LLM10"
+      ],
+      "focus": "Cumulative personal spending and consequential commitments."
+    },
+    {
+      "id": "PAA07",
+      "name": "Unauthorized Social Representation",
+      "boundary": "Who may speak or make interpersonal representations in the person's name.",
+      "asi": [
+        "ASI03",
+        "ASI07",
+        "ASI09"
+      ],
+      "llm2025": [
+        "LLM06",
+        "LLM09"
+      ],
+      "focus": "Authority over interpersonal speech and representation."
+    },
+    {
+      "id": "PAA08",
+      "name": "Household and Bystander Consent Violations",
+      "boundary": "The autonomy and information interests of people other than the operator.",
+      "asi": [
+        "ASI02",
+        "ASI03",
+        "ASI07",
+        "ASI08"
+      ],
+      "llm2025": [
+        "LLM02",
+        "LLM06"
+      ],
+      "focus": "Nonuser interests, household roles, and legitimate-operator abuse."
+    },
+    {
+      "id": "PAA09",
+      "name": "Manipulation of Personal Choice",
+      "boundary": "The person's ability to form and revise choices without covert influence.",
+      "asi": [
+        "ASI01",
+        "ASI09"
+      ],
+      "llm2025": [
+        "LLM09",
+        "LLM01"
+      ],
+      "focus": "Hidden incentives and pressure on personal choice."
+    },
+    {
+      "id": "PAA10",
+      "name": "Loss of Personal Control and Continuity",
+      "boundary": "Ability to inspect, stop, exit, recover, and continue necessary activities.",
+      "asi": [
+        "ASI08",
+        "ASI10"
+      ],
+      "llm2025": [
+        "LLM06"
+      ],
+      "focus": "Self-service stop, recovery, exit, and continuity."
+    }
+  ]
+}
