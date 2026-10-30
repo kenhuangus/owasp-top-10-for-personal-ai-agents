@@ -22,6 +22,17 @@ The list is an awareness taxonomy, not a ranking by measured frequency or severi
 | [PAA09](entries/PAA09-manipulation-of-personal-choice.md) | Manipulation of Personal Choice | The person's ability to form and revise choices without covert influence. |
 | [PAA10](entries/PAA10-loss-of-personal-control-and-continuity.md) | Loss of Personal Control and Continuity | Ability to inspect, stop, exit, recover, and continue necessary activities. |
 
+## Reference implementation of mitigations
+
+**[paa10-guard](https://github.com/kenhuangus/paa10-guard)** is the reference implementation of the mitigations in this list. It is an open, dependency-free policy guard that checks every action a personal agent proposes, outside the model, and answers allow, require approval, or deny.
+
+- One check per entry, each traced to the entry's provider requirements: [requirement-to-control mapping](https://github.com/kenhuangus/paa10-guard/blob/main/docs/mapping.md).
+- Enforcement through a gating MCP proxy, a pre-tool hook, or a hosted HTTP/MCP service; owner-only approvals bound to exact terms; a stop switch; and a hash-chained audit log.
+- Packs for [Meta Muse](https://github.com/kenhuangus/paa10-guard/tree/main/platforms/meta-muse), [Grok Bot](https://github.com/kenhuangus/paa10-guard/tree/main/platforms/grok-bot), [OpenAI Dots](https://github.com/kenhuangus/paa10-guard/tree/main/platforms/openai-dots), and [Anthropic Claude Duet and Claude Code](https://github.com/kenhuangus/paa10-guard/tree/main/platforms/anthropic-duet), including a Claude plugin with a skill and hook.
+- 53 tests built from the documented cases in these entries, run in CI on Linux, Windows, and macOS.
+
+Each entry's mitigation section links to its controls in the guard.
+
 ## Layout
 
 - `entries/`: one file per risk (Description, Common Examples, Example Attack Scenarios, Prevention and Mitigation split by person and provider, Verification, Evidence, Crosswalk, References).
