@@ -1,4 +1,5 @@
 **Website: https://kenhuangus.github.io/owasp-top-10-for-personal-ai-agents/**
+
 **Reference mitigation: [paa10-guard](https://github.com/kenhuangus/paa10-guard)** (policy guard, MCP proxy, hooks, skill, and packs for Meta Muse, Grok Bot, OpenAI Dots and Claude Duet)
 
 # OWASP Top 10 for Personal AI Agents (PAA10)
