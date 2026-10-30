@@ -24,6 +24,30 @@ The person cannot inspect, stop, revoke, recover, or leave an agent arrangement 
 
 All scenarios are synthetic evaluation cases, not allegations about any named product. Machine-readable versions are in [`scenarios/PAA10.yaml`](../scenarios/PAA10.yaml).
 
+## Real-World Examples
+
+Dated, sourced cases matched to the scenarios above. `read: primary` means I opened and read the source page; `read: secondary` means only press or vendor coverage was available. Items marked as no case found are stated plainly rather than filled with a lookalike.
+
+### Stop commands ignored; the agent stopped only when the host machine was shut down (2026-02-23)
+
+- Type: Reported incident; direct match; maps to: Scenario 1
+- What happened: In the same OpenClaw inbox incident, Summer Yue said her repeated stop commands ('Stop don't do anything', 'STOP OPENCLAW') did not halt the agent, and she had to run to the Mac mini hosting it. This is the clearest public example of a stop request being acknowledged or sent but not enforced.
+- Caveats: Single-source account; see PAA01 for caveats.
+- Sources: [AI Incident Database #1542](https://incidentdatabase.ai/cite/1542/); [TechCrunch](https://techcrunch.com/2026/02/23/a-meta-ai-security-researcher-said-an-openclaw-agent-ran-amok-on-her-inbox/) (read: secondary)
+
+### Moltbook exposure leaves agent API tokens and emails to be rotated (2026-02)
+
+- Type: Reported incident; supporting evidence; maps to: general
+- What happened: Security write-ups report that an unsecured Moltbook database (a Supabase key in client-side code with no row-level security) exposed about 35,000 email addresses and 1.5 million agent API tokens, letting holders impersonate agents. Containing this required users to rotate credentials the platform no longer controlled.
+- Caveats: Figures come from security blogs and vary slightly; I did not read a primary disclosure. It illustrates why 'delete the token' is not recovery.
+- Sources: [Reco write-up](https://www.reco.ai/blog/openclaw-the-ai-agent-security-crisis-unfolding-right-now); [BetterClaw summary](https://www.betterclaw.io/blog/openclaw-security-2026) (read: secondary)
+
+### No documented case of a suspended agent account stranding a person's obligations or records
+
+- Type: No real-world case found; maps to: Scenario 2
+- What happened: I found no public report matching the suspended-account scenario.
+- Caveats: Treat as hypothetical.
+
 ## Prevention and Mitigation Guidelines
 
 ### What the person can do

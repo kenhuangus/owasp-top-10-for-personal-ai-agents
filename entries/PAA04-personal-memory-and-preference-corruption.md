@@ -23,6 +23,31 @@ The agent's retained account of the person's preferences, relationships, constra
 
 All scenarios are synthetic evaluation cases, not allegations about any named product. Machine-readable versions are in [`scenarios/PAA04.yaml`](../scenarios/PAA04.yaml).
 
+## Real-World Examples
+
+Dated, sourced cases matched to the scenarios above. `read: primary` means I opened and read the source page; `read: secondary` means only press or vendor coverage was available. Items marked as no case found are stated plainly rather than filled with a lookalike.
+
+### ChatGPT memory written and deleted through untrusted content (2024-05-22)
+
+- Type: Researcher demonstration; direct match; maps to: Scenario 1
+- What happened: Johann Rehberger showed that content from a connected Google Doc, an uploaded image, or a Bing browsing result could make ChatGPT write false memories, biases, or standing instructions, and that a simple injection could delete all stored memories. He reported it to OpenAI, which closed it as a model-safety issue rather than a security vulnerability; he says only partial mitigations for browsing were added.
+- Caveats: Controlled demonstration on a 2024 product version; current behavior may differ.
+- Sources: [Embrace The Red, 22 May 2024](https://embracethered.com/blog/posts/2024/chatgpt-hacking-memories/) (read: primary)
+
+### Gemini memory planted by a poisoned document, triggered later by ordinary words (2025-02)
+
+- Type: Researcher demonstration; direct match; maps to: Scenario 1
+- What happened: Rehberger's 'delayed tool invocation' technique hid instructions in a document so that Gemini saved a false memory only when the user later typed an ordinary word such as 'yes' or 'sure'. His demo made Gemini remember him as a 102-year-old flat-earther.
+- Caveats: Known here only through secondary write-ups; reporting on Google's assessment and fix status conflicts.
+- Sources: [Christian Schneider write-up](https://christian-schneider.net/blog/persistent-memory-poisoning-in-ai-agents/) (read: secondary)
+
+### Vendor-reported promotional 'remember this' prompts aimed at assistant memory (2026-02)
+
+- Type: Reported incident; supporting evidence; maps to: general
+- What happened: A vendor blog reports Microsoft finding more than 50 prompts from 31 companies that tried to plant promotional instructions in assistant memory.
+- Caveats: Second-hand from a vendor blog; I did not locate Microsoft's own report. Verify before relying on the numbers.
+- Sources: [Akto summary](https://www.akto.io/blog/memory-poisoning-ai-agents) (read: secondary)
+
 ## Prevention and Mitigation Guidelines
 
 ### What the person can do

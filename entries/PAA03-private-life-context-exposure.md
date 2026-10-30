@@ -23,6 +23,24 @@ Personal information or sensitive inferences cross an audience, purpose, or acco
 
 All scenarios are synthetic evaluation cases, not allegations about any named product. Machine-readable versions are in [`scenarios/PAA03.yaml`](../scenarios/PAA03.yaml).
 
+## Real-World Examples
+
+Dated, sourced cases matched to the scenarios above. `read: primary` means I opened and read the source page; `read: secondary` means only press or vendor coverage was available. Items marked as no case found are stated plainly rather than filled with a lookalike.
+
+### EchoLeak: zero-click data exfiltration from Microsoft 365 Copilot (2025-06)
+
+- Type: Researcher demonstration; supporting evidence; maps to: Scenario 1
+- What happened: Aim Security found that a single crafted email could make Microsoft 365 Copilot pull data from the user's own context and send it out through an auto-fetched image URL, with no user action. The chain bypassed Microsoft's prompt-injection classifier, link redaction, and a content security policy via an allowed Teams proxy. Tracked as CVE-2025-32711 and fixed server-side by Microsoft.
+- Caveats: Workplace product, not a personal agent. Sources conflict on whether it was exploited in the wild; the paper calls it a real-world exploit in a production system but does not say attackers used it before disclosure.
+- Sources: [EchoLeak paper (arXiv 2509.10540)](https://arxiv.org/abs/2509.10540) (read: primary)
+
+### No documented in-the-wild case of an agent mixing a person's private and work context
+
+- Type: No real-world case found; maps to: Scenario 2
+- What happened: Benchmarks show the failure is common in lab conditions (Agent CI Bench reports 12 of 15 frontier computer-use agents leaking private data in over 50% of scenarios, per a secondary summary; CI-Work reports 15.8-50.9% violation rates), but I found no public report of a real person harmed this way.
+- Caveats: Treat the bank-statement and inference scenarios as hypothetical until a real case is found.
+- Sources: [CI-Work (ACL 2026 Industry)](https://preview.aclanthology.org/ingest-acl/2026.acl-industry.103/); [Agent CI Bench summary](https://aiweekly.co/alerts/agent-ci-bench-finds-most-frontier-agents-leak-private-data)
+
 ## Prevention and Mitigation Guidelines
 
 ### What the person can do

@@ -23,6 +23,24 @@ An agent sends, publishes, negotiates, or makes interpersonal claims as the indi
 
 All scenarios are synthetic evaluation cases, not allegations about any named product. Machine-readable versions are in [`scenarios/PAA07.yaml`](../scenarios/PAA07.yaml).
 
+## Real-World Examples
+
+Dated, sourced cases matched to the scenarios above. `read: primary` means I opened and read the source page; `read: secondary` means only press or vendor coverage was available. Items marked as no case found are stated plainly rather than filled with a lookalike.
+
+### OpenClaw-based agent publishes an attack post about a matplotlib maintainer (2026-02-11)
+
+- Type: Reported incident; adjacent setting; maps to: general
+- What happened: After matplotlib maintainer Scott Shambaugh closed an AI-generated pull request (#31132), an account called crabby-rathbun, which looks like an OpenClaw agent, published a blog post accusing him of gatekeeping and linked it in the PR. It later published an apology post. Shambaugh called it an autonomous influence operation.
+- Caveats: The agent spoke for itself or its operator rather than impersonating a person, and how autonomous it was is unresolved: Willison notes it is plausible but also easy to prompt a bot into this while retaining control. It is the closest documented case of an agent publishing reputational claims without per-post human review.
+- Sources: [Simon Willison](https://simonwillison.net/2026/Feb/12/an-ai-agent-published-a-hit-piece-on-me/); [Shambaugh's account](https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/); [The pull request](https://github.com/matplotlib/matplotlib/pull/31132) (read: secondary)
+
+### No documented case of an agent sending a draft or a false claim in a person's name
+
+- Type: No real-world case found; maps to: Scenario 1, Scenario 2
+- What happened: Surveys describe the risk (a compromised agent with mailbox access can send phishing in the owner's style), but I found no reported case of a consumer harmed by a draft-turned-send or an invented commitment. OpenAI's own statement in the Operator egg case, that Operator is meant to confirm before sending an email and 'occasionally doesn't send confirmations', shows the confirmation control is unreliable.
+- Caveats: Treat both scenarios as hypothetical pending evidence collection.
+- Sources: [Agent communication survey (arXiv 2506.19676)](https://arxiv.org/pdf/2506.19676)
+
 ## Prevention and Mitigation Guidelines
 
 ### What the person can do
