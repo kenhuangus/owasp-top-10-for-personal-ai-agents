@@ -1,8 +1,10 @@
 {
-  "version": "0.1-draft",
+  "version": "0.2-draft",
   "targets": {
     "asi": "OWASP Top 10 for Agentic Applications 2026",
-    "llm": "OWASP Top 10 for LLM Applications 2025"
+    "llm": "OWASP Top 10 for LLM Applications 2025",
+    "agentic_skills": "OWASP Agentic Skills Top 10 v1.0 (2026), https://owasp.github.io/www-project-agentic-skills-top-10/",
+    "mcp": "OWASP MCP Top 10 (2025, beta), https://owasp.org/projects/mcp-top-10"
   },
   "entries": [
     {
@@ -16,6 +18,14 @@
       ],
       "llm2025": [
         "LLM06"
+      ],
+      "agentic_skills": [
+        "AST03",
+        "AST09"
+      ],
+      "mcp": [
+        "MCP02",
+        "MCP07"
       ],
       "focus": "Continuing consent, expiry, and withdrawal of a personal mandate."
     },
@@ -33,6 +43,18 @@
         "LLM03",
         "LLM06"
       ],
+      "agentic_skills": [
+        "AST01",
+        "AST02",
+        "AST06",
+        "AST07"
+      ],
+      "mcp": [
+        "MCP01",
+        "MCP03",
+        "MCP04",
+        "MCP05"
+      ],
       "focus": "Concentrated account access and independent recovery."
     },
     {
@@ -48,6 +70,14 @@
         "LLM02",
         "LLM08"
       ],
+      "agentic_skills": [
+        "AST03",
+        "AST05"
+      ],
+      "mcp": [
+        "MCP06",
+        "MCP10"
+      ],
       "focus": "Boundaries between private life, work, and personal audiences."
     },
     {
@@ -61,6 +91,14 @@
         "LLM04",
         "LLM01",
         "LLM08"
+      ],
+      "agentic_skills": [
+        "AST05",
+        "AST08"
+      ],
+      "mcp": [
+        "MCP06",
+        "MCP10"
       ],
       "focus": "Accuracy and correction of the agent's representation of its owner."
     },
@@ -77,6 +115,15 @@
         "LLM01",
         "LLM09"
       ],
+      "agentic_skills": [
+        "AST01",
+        "AST04",
+        "AST05"
+      ],
+      "mcp": [
+        "MCP03",
+        "MCP06"
+      ],
       "focus": "Consumer verification of counterparties and payment claims."
     },
     {
@@ -92,6 +139,13 @@
         "LLM06",
         "LLM10"
       ],
+      "agentic_skills": [
+        "AST03"
+      ],
+      "mcp": [
+        "MCP02",
+        "MCP07"
+      ],
       "focus": "Cumulative personal spending and consequential commitments."
     },
     {
@@ -106,6 +160,14 @@
       "llm2025": [
         "LLM06",
         "LLM09"
+      ],
+      "agentic_skills": [
+        "AST03",
+        "AST09"
+      ],
+      "mcp": [
+        "MCP02",
+        "MCP07"
       ],
       "focus": "Authority over interpersonal speech and representation."
     },
@@ -123,6 +185,12 @@
         "LLM02",
         "LLM06"
       ],
+      "agentic_skills": [
+        "AST03"
+      ],
+      "mcp": [
+        "MCP10"
+      ],
       "focus": "Nonuser interests, household roles, and legitimate-operator abuse."
     },
     {
@@ -137,6 +205,14 @@
         "LLM09",
         "LLM01"
       ],
+      "agentic_skills": [
+        "AST01",
+        "AST05"
+      ],
+      "mcp": [
+        "MCP03",
+        "MCP06"
+      ],
       "focus": "Hidden incentives and pressure on personal choice."
     },
     {
@@ -149,6 +225,15 @@
       ],
       "llm2025": [
         "LLM06"
+      ],
+      "agentic_skills": [
+        "AST06",
+        "AST09",
+        "AST10"
+      ],
+      "mcp": [
+        "MCP08",
+        "MCP09"
       ],
       "focus": "Self-service stop, recovery, exit, and continuity."
     }

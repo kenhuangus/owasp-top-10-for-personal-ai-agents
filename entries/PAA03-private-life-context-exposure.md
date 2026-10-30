@@ -114,6 +114,8 @@ Benchmarks, regulatory actions, and design analysis that support this entry beyo
 
 - OWASP Top 10 for Agentic Applications 2026: ASI03 Identity and Privilege Abuse, ASI06 Memory and Context Poisoning, ASI07 Insecure Inter-Agent Communication
 - OWASP Top 10 for LLM Applications 2025: LLM02 Sensitive Information Disclosure, LLM08 Vector and Embedding Weaknesses
+- [OWASP Agentic Skills Top 10](https://owasp.github.io/www-project-agentic-skills-top-10/): AST03 Over-Privileged Skills, AST05 Untrusted External Instructions
+- [OWASP MCP Top 10](https://owasp.org/projects/mcp-top-10): MCP06 Prompt Injection via Contextual Payloads, MCP10 Context Injection and Over-Sharing
 - Additional personal focus: Boundaries between private life, work, and personal audiences.
 
 ## References

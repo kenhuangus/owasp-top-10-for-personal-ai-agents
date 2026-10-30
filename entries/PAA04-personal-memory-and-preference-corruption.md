@@ -110,6 +110,8 @@ Benchmarks, regulatory actions, and design analysis that support this entry beyo
 
 - OWASP Top 10 for Agentic Applications 2026: ASI06 Memory and Context Poisoning
 - OWASP Top 10 for LLM Applications 2025: LLM04 Data and Model Poisoning, LLM01 Prompt Injection, LLM08 Vector and Embedding Weaknesses
+- [OWASP Agentic Skills Top 10](https://owasp.github.io/www-project-agentic-skills-top-10/): AST05 Untrusted External Instructions, AST08 Poor Scanning
+- [OWASP MCP Top 10](https://owasp.org/projects/mcp-top-10): MCP06 Prompt Injection via Contextual Payloads, MCP10 Context Injection and Over-Sharing
 - Additional personal focus: Accuracy and correction of the agent's representation of its owner.
 
 ## References

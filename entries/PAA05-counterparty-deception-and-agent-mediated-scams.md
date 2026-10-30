@@ -93,6 +93,8 @@ Benchmarks, regulatory actions, and design analysis that support this entry beyo
 
 - OWASP Top 10 for Agentic Applications 2026: ASI01 Agent Goal Hijack, ASI02 Tool Misuse and Exploitation, ASI09 Human-Agent Trust Exploitation
 - OWASP Top 10 for LLM Applications 2025: LLM01 Prompt Injection, LLM09 Misinformation
+- [OWASP Agentic Skills Top 10](https://owasp.github.io/www-project-agentic-skills-top-10/): AST01 Malicious Skills, AST04 Insecure Metadata, AST05 Untrusted External Instructions
+- [OWASP MCP Top 10](https://owasp.org/projects/mcp-top-10): MCP03 Tool Poisoning, MCP06 Prompt Injection via Contextual Payloads
 - Additional personal focus: Consumer verification of counterparties and payment claims.
 
 ## References

@@ -8,6 +8,8 @@
 
 Personal AI agents act across a person's accounts, retain memory, work over time, and speak or transact on their behalf, often with no security administrator. PAA10 identifies where that delegation fails, who must implement each safeguard (person, agent service, integration, or account provider), and how to test it. It builds on the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) and the [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/), and reuses their mechanisms rather than claiming new attack classes. Each entry must add a personal harm pathway and a concrete safeguard or test.
 
+**Related OWASP projects (crosswalked):** the [OWASP Agentic Skills Top 10](https://owasp.github.io/www-project-agentic-skills-top-10/) covers the skills and plug-ins an agent loads, and the [OWASP MCP Top 10](https://owasp.org/projects/mcp-top-10) covers the MCP servers and tools it connects to. PAA10 covers what happens to the person when those components or the agent fail. Each entry lists its related AST and MCP items; see the [full crosswalk](docs/crosswalk.md).
+
 The list is an awareness taxonomy, not a ranking by measured frequency or severity.
 
 | ID | Risk | Primary protection boundary |
@@ -38,7 +40,7 @@ Each entry's mitigation section links to its controls in the guard.
 
 - `entries/`: one file per risk (Description, Common Examples, Example Attack Scenarios, Prevention and Mitigation split by person and provider, Verification, Evidence, Crosswalk, References).
 - `scenarios/`: machine-readable synthetic scenarios and one control test per entry.
-- `crosswalk/`, `docs/crosswalk.md`: mapping to ASI 2026 and LLM 2025.
+- `crosswalk/`, `docs/crosswalk.md`: mapping to ASI 2026, LLM 2025, the Agentic Skills Top 10 and the MCP Top 10.
 - `docs/real-world-examples.md`: index of dated real-world cases per entry, with evidence type and how the source was read.
 - `docs/evidence-log.md`: every cited source grouped by entry, plus the known gaps.
 - `site/`: the GitHub Pages website, deployed by `.github/workflows/pages.yml`.

@@ -93,6 +93,8 @@ Benchmarks, regulatory actions, and design analysis that support this entry beyo
 
 - OWASP Top 10 for Agentic Applications 2026: ASI01 Agent Goal Hijack, ASI02 Tool Misuse and Exploitation, ASI03 Identity and Privilege Abuse
 - OWASP Top 10 for LLM Applications 2025: LLM06 Excessive Agency
+- [OWASP Agentic Skills Top 10](https://owasp.github.io/www-project-agentic-skills-top-10/): AST03 Over-Privileged Skills, AST09 No Governance
+- [OWASP MCP Top 10](https://owasp.org/projects/mcp-top-10): MCP02 Privilege Escalation via Scope Creep, MCP07 Insufficient Authentication and Authorization
 - Additional personal focus: Continuing consent, expiry, and withdrawal of a personal mandate.
 
 ## References

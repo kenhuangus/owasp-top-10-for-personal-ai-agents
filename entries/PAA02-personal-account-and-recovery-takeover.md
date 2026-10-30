@@ -104,6 +104,8 @@ Benchmarks, regulatory actions, and design analysis that support this entry beyo
 
 - OWASP Top 10 for Agentic Applications 2026: ASI03 Identity and Privilege Abuse, ASI04 Agentic Supply Chain Vulnerabilities, ASI05 Unexpected Code Execution
 - OWASP Top 10 for LLM Applications 2025: LLM01 Prompt Injection, LLM03 Supply Chain, LLM06 Excessive Agency
+- [OWASP Agentic Skills Top 10](https://owasp.github.io/www-project-agentic-skills-top-10/): AST01 Malicious Skills, AST02 Supply Chain Compromise, AST06 Weak Isolation, AST07 Update Drift
+- [OWASP MCP Top 10](https://owasp.org/projects/mcp-top-10): MCP01 Token Mismanagement and Secret Exposure, MCP03 Tool Poisoning, MCP04 Software Supply Chain Attacks and Dependency Tampering, MCP05 Command Injection and Execution
 - Additional personal focus: Concentrated account access and independent recovery.
 
 ## References
