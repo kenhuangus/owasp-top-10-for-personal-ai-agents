@@ -94,6 +94,8 @@ Dated, sourced cases matched to the scenarios above. "Source read directly" mean
 
 Where a safeguard is unavailable, offer a narrower mode (read-only access, manual completion) rather than rely on an instruction to the model.
 
+Reference implementation: [paa10-guard controls for PAA08](https://github.com/kenhuangus/paa10-guard/blob/main/docs/mapping.md#paa08-household-and-bystander-consent-violations).
+
 ## Verification (reproducible control test)
 
 Test asymmetric household permissions, shared-device ambiguity, expanded recipient lists, and requests for another person's location, using synthetic records and authorized participants. Check the boundary against both outsider attacks and operator misuse, including whether notices or recovery paths expose protected activity. Record limitations that require separate accounts or infrastructure.

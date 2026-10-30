@@ -77,6 +77,8 @@ Dated, sourced cases matched to the scenarios above. "Source read directly" mean
 
 Where a safeguard is unavailable, offer a narrower mode (read-only access, manual completion) rather than rely on an instruction to the model.
 
+Reference implementation: [paa10-guard controls for PAA06](https://github.com/kenhuangus/paa10-guard/blob/main/docs/mapping.md#paa06-unauthorized-spending-and-personal-commitments).
+
 ## Verification (reproducible control test)
 
 Test several transactions below a per-action cap, parallel purchases, retries after unknown outcomes, and term changes between approval and execution. Confirm that aggregate ceilings and approval binding hold. Verify receipts against the receiving service rather than accepting the agent's statement that a task succeeded.

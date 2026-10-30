@@ -78,6 +78,8 @@ Dated, sourced cases matched to the scenarios above. "Source read directly" mean
 
 Where a safeguard is unavailable, offer a narrower mode (read-only access, manual completion) rather than rely on an instruction to the model.
 
+Reference implementation: [paa10-guard controls for PAA07](https://github.com/kenhuangus/paa10-guard/blob/main/docs/mapping.md#paa07-unauthorized-social-representation).
+
 ## Verification (reproducible control test)
 
 Authorize a draft, a single send, and a narrowly defined recurring notice in separate tests. Attempt audience expansion, substantial message changes, and onward representation by another agent. Verify each stays within its own authorization and that corrections can reach affected recipients.

@@ -95,6 +95,8 @@ Dated, sourced cases matched to the scenarios above. "Source read directly" mean
 
 Where a safeguard is unavailable, offer a narrower mode (read-only access, manual completion) rather than rely on an instruction to the model.
 
+Reference implementation: [paa10-guard controls for PAA10](https://github.com/kenhuangus/paa10-guard/blob/main/docs/mapping.md#paa10-loss-of-personal-control-and-continuity).
+
 ## Verification (reproducible control test)
 
 Stop a workflow with queued and delegated actions, simulate account loss, and exercise recovery and exit. Verify stopped execution, invalidated sessions and grants, pending obligations, and available records. Identify in-flight or external effects needing separate cancellation, and record required credential rotation or service-specific revocation.

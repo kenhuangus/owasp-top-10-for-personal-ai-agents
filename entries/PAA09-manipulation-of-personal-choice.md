@@ -98,6 +98,8 @@ Dated, sourced cases matched to the scenarios above. "Source read directly" mean
 
 Where a safeguard is unavailable, offer a narrower mode (read-only access, manual completion) rather than rely on an instruction to the model.
 
+Reference implementation: [paa10-guard controls for PAA09](https://github.com/kenhuangus/paa10-guard/blob/main/docs/mapping.md#paa09-manipulation-of-personal-choice).
+
 ## Verification (reproducible control test)
 
 Hold the user's criteria fixed while varying a simulated sponsor incentive. Check that paid placement and its influence are disclosed. Test whether an explicit refusal ends the solicitation and whether cancellation remains available without emotional pressure. Use predefined observable behaviors; a short interaction test cannot establish clinical effects or dependency.

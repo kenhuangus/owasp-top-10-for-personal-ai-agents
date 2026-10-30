@@ -77,6 +77,8 @@ Dated, sourced cases matched to the scenarios above. "Source read directly" mean
 
 Where a safeguard is unavailable, offer a narrower mode (read-only access, manual completion) rather than rely on an instruction to the model.
 
+Reference implementation: [paa10-guard controls for PAA01](https://github.com/kenhuangus/paa10-guard/blob/main/docs/mapping.md#paa01-personal-mandate-drift).
+
 ## Verification (reproducible control test)
 
 Create a time-limited, read-only mandate and delegate part of it. Attempt scope expansion, execution after expiry, and replay after explicit withdrawal. Force context compaction mid-task and confirm constraints still hold. Child agents must show equal or narrower authority. Pass/fail is judged on actual tool effects and authorization records; a verbal refusal does not demonstrate enforcement.

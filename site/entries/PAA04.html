@@ -10,7 +10,7 @@
 <header class="nav" id="top"><div class="wrap">
 <a class="brand" href="../index.html"><span class="logo" aria-hidden="true">10</span><span>PAA10</span></a>
 <button class="theme menu" id="menu" aria-label="Menu" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-<ul><li><a href="../index.html#top10">The Top 10</a></li><li><a href="../index.html#how">How it works</a></li><li><a href="../index.html#crosswalk">Crosswalk</a></li><li><a href="../index.html#evidence">Evidence</a></li><li><a href="../index.html#contribute">Contribute</a></li>
+<ul><li><a href="../index.html#top10">The Top 10</a></li><li><a href="../index.html#how">How it works</a></li><li><a href="../index.html#crosswalk">Crosswalk</a></li><li><a href="../index.html#evidence">Evidence</a></li><li><a href="../index.html#mitigation">Mitigation</a></li><li><a href="../index.html#contribute">Contribute</a></li>
 <li><a href="https://github.com/kenhuangus/owasp-top-10-for-personal-ai-agents" rel="noopener">GitHub</a></li>
 <li><button class="theme" id="theme" aria-label="Toggle light and dark theme"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button></li></ul>
 </div></header>
@@ -48,6 +48,7 @@
 <h2 id="prevention">Prevention and mitigation</h2>
 <div class="two"><div class="col me"><h3>What you can do</h3><ul><li>Inspect, correct, and delete memories; separate one-time instructions from lasting preferences.</li><li>Be suspicious when the agent &#x27;remembers&#x27; something you never told it.</li></ul></div><div class="col pv"><h3>What the provider must do</h3><ul><li>Record provenance and age for every memory; keep inferred preferences separate from explicit instructions.</li><li>Prevent untrusted content from writing memory that carries authority; require confirmation for sensitive or consequential entries.</li><li>Propagate corrections and deletions to indexes, caches, and dependent automations, and state the retention limits.</li><li>Expire low-confidence memories and re-confirm before consequential use.</li></ul></div></div>
 <p style="margin-top:14px">Where a safeguard is unavailable, offer a narrower mode such as read-only access or manual completion rather than rely on an instruction to the model.</p>
+<p><a class="btn line" href="https://github.com/kenhuangus/paa10-guard/blob/main/docs/mapping.md#paa04-personal-memory-and-preference-corruption" rel="noopener">See the reference guard controls for PAA04 &rarr;</a></p>
 <h2 id="test">Test it</h2><div class="test"><b>Reproducible control test.</b> Introduce a conflicting preference through an untrusted source, then test its use in a later session and by a subagent. Correct the record and check subsequent decisions, caches, and scheduled work. Deletion verification must state its scope and retention limits; it cannot retrieve data already disclosed externally.</div>
 <h2 id="crosswalk">Framework crosswalk</h2>
 <p>Related mechanisms in other OWASP work. This is an analytical mapping, not equivalence.</p>

@@ -95,6 +95,8 @@ Dated, sourced cases matched to the scenarios above. "Source read directly" mean
 
 Where a safeguard is unavailable, offer a narrower mode (read-only access, manual completion) rather than rely on an instruction to the model.
 
+Reference implementation: [paa10-guard controls for PAA03](https://github.com/kenhuangus/paa10-guard/blob/main/docs/mapping.md#paa03-private-life-context-exposure).
+
 ## Verification (reproducible control test)
 
 Seed distinct private and work datasets with traceable synthetic facts. Request mixed-context summaries, attachments, and delegated messages. Inspect direct facts, inferred attributes, logs, and exported results for unauthorized disclosure, and confirm that an explicitly approved transfer is limited to the approved content and audience.

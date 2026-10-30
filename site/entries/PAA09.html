@@ -10,7 +10,7 @@
 <header class="nav" id="top"><div class="wrap">
 <a class="brand" href="../index.html"><span class="logo" aria-hidden="true">10</span><span>PAA10</span></a>
 <button class="theme menu" id="menu" aria-label="Menu" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-<ul><li><a href="../index.html#top10">The Top 10</a></li><li><a href="../index.html#how">How it works</a></li><li><a href="../index.html#crosswalk">Crosswalk</a></li><li><a href="../index.html#evidence">Evidence</a></li><li><a href="../index.html#contribute">Contribute</a></li>
+<ul><li><a href="../index.html#top10">The Top 10</a></li><li><a href="../index.html#how">How it works</a></li><li><a href="../index.html#crosswalk">Crosswalk</a></li><li><a href="../index.html#evidence">Evidence</a></li><li><a href="../index.html#mitigation">Mitigation</a></li><li><a href="../index.html#contribute">Contribute</a></li>
 <li><a href="https://github.com/kenhuangus/owasp-top-10-for-personal-ai-agents" rel="noopener">GitHub</a></li>
 <li><button class="theme" id="theme" aria-label="Toggle light and dark theme"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button></li></ul>
 </div></header>
@@ -49,6 +49,7 @@
 <h2 id="prevention">Prevention and mitigation</h2>
 <div class="two"><div class="col me"><h3>What you can do</h3><ul><li>State decision criteria up front and ask to see alternatives and why they were ranked.</li><li>Refuse or disconnect; a good agent stops asking after an explicit no.</li></ul></div><div class="col pv"><h3>What the provider must do</h3><ul><li>Disclose material incentives at the decision point; separate paid placement from the person&#x27;s criteria.</li><li>Prohibit false urgency and deceptive relationship claims when seeking approval.</li><li>End solicitation after explicit refusal; keep cancellation and disconnection simple.</li><li>Audit recommendations against fixed user criteria while varying simulated sponsor incentives.</li></ul></div></div>
 <p style="margin-top:14px">Where a safeguard is unavailable, offer a narrower mode such as read-only access or manual completion rather than rely on an instruction to the model.</p>
+<p><a class="btn line" href="https://github.com/kenhuangus/paa10-guard/blob/main/docs/mapping.md#paa09-manipulation-of-personal-choice" rel="noopener">See the reference guard controls for PAA09 &rarr;</a></p>
 <h2 id="test">Test it</h2><div class="test"><b>Reproducible control test.</b> Hold the user&#x27;s criteria fixed while varying a simulated sponsor incentive. Check that paid placement and its influence are disclosed. Test whether an explicit refusal ends the solicitation and whether cancellation remains available without emotional pressure. Use predefined observable behaviors; a short interaction test cannot establish clinical effects or dependency.</div>
 <h2 id="crosswalk">Framework crosswalk</h2>
 <p>Related mechanisms in other OWASP work. This is an analytical mapping, not equivalence.</p>

@@ -76,6 +76,8 @@ Dated, sourced cases matched to the scenarios above. "Source read directly" mean
 
 Where a safeguard is unavailable, offer a narrower mode (read-only access, manual completion) rather than rely on an instruction to the model.
 
+Reference implementation: [paa10-guard controls for PAA05](https://github.com/kenhuangus/paa10-guard/blob/main/docs/mapping.md#paa05-counterparty-deception-and-agent-mediated-scams).
+
 ## Verification (reproducible control test)
 
 Use synthetic invoices, support messages, and booking pages with changed destinations and fabricated urgency. Include compromised familiar senders and owner-initiated tasks. Verify that spending limits do not substitute for verification and that legitimate requests remain possible through a defined confirmation path.

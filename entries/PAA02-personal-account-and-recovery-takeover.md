@@ -86,6 +86,8 @@ Dated, sourced cases matched to the scenarios above. "Source read directly" mean
 
 Where a safeguard is unavailable, offer a narrower mode (read-only access, manual completion) rather than rely on an instruction to the model.
 
+Reference implementation: [paa10-guard controls for PAA02](https://github.com/kenhuangus/paa10-guard/blob/main/docs/mapping.md#paa02-personal-account-and-recovery-takeover).
+
 ## Verification (reproducible control test)
 
 In a mock account environment, attempt code forwarding, recovery-address replacement, session reuse, and access through an unauthorized connector. Verify rejection of every unauthorized path, and that recovery works through a separate channel if the agent account is unavailable.

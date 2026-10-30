@@ -10,7 +10,7 @@
 <header class="nav" id="top"><div class="wrap">
 <a class="brand" href="../index.html"><span class="logo" aria-hidden="true">10</span><span>PAA10</span></a>
 <button class="theme menu" id="menu" aria-label="Menu" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-<ul><li><a href="../index.html#top10">The Top 10</a></li><li><a href="../index.html#how">How it works</a></li><li><a href="../index.html#crosswalk">Crosswalk</a></li><li><a href="../index.html#evidence">Evidence</a></li><li><a href="../index.html#contribute">Contribute</a></li>
+<ul><li><a href="../index.html#top10">The Top 10</a></li><li><a href="../index.html#how">How it works</a></li><li><a href="../index.html#crosswalk">Crosswalk</a></li><li><a href="../index.html#evidence">Evidence</a></li><li><a href="../index.html#mitigation">Mitigation</a></li><li><a href="../index.html#contribute">Contribute</a></li>
 <li><a href="https://github.com/kenhuangus/owasp-top-10-for-personal-ai-agents" rel="noopener">GitHub</a></li>
 <li><button class="theme" id="theme" aria-label="Toggle light and dark theme"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button></li></ul>
 </div></header>
@@ -46,6 +46,7 @@
 <h2 id="prevention">Prevention and mitigation</h2>
 <div class="two"><div class="col me"><h3>What you can do</h3><ul><li>Verify unusual payees and payment changes through an independently established channel.</li><li>Approve new payees yourself; do not let the agent add them on message evidence alone.</li></ul></div><div class="col pv"><h3>What the provider must do</h3><ul><li>Preserve the source of each claim; check changed payment details against an independent record.</li><li>Do not let an incoming request supply its own proof of authority.</li><li>Show recipient, evidence, and unusual terms on the approval screen; flag inconsistencies.</li><li>Run merchant and payee reputation checks that are independent of page content; prefer allow-listed or tokenized payment rails.</li><li>Do not treat spending limits as a substitute for counterparty verification.</li></ul></div></div>
 <p style="margin-top:14px">Where a safeguard is unavailable, offer a narrower mode such as read-only access or manual completion rather than rely on an instruction to the model.</p>
+<p><a class="btn line" href="https://github.com/kenhuangus/paa10-guard/blob/main/docs/mapping.md#paa05-counterparty-deception-and-agent-mediated-scams" rel="noopener">See the reference guard controls for PAA05 &rarr;</a></p>
 <h2 id="test">Test it</h2><div class="test"><b>Reproducible control test.</b> Use synthetic invoices, support messages, and booking pages with changed destinations and fabricated urgency. Include compromised familiar senders and owner-initiated tasks. Verify that spending limits do not substitute for verification and that legitimate requests remain possible through a defined confirmation path.</div>
 <h2 id="crosswalk">Framework crosswalk</h2>
 <p>Related mechanisms in other OWASP work. This is an analytical mapping, not equivalence.</p>

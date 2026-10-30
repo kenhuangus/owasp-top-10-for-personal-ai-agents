@@ -93,6 +93,8 @@ Dated, sourced cases matched to the scenarios above. "Source read directly" mean
 
 Where a safeguard is unavailable, offer a narrower mode (read-only access, manual completion) rather than rely on an instruction to the model.
 
+Reference implementation: [paa10-guard controls for PAA04](https://github.com/kenhuangus/paa10-guard/blob/main/docs/mapping.md#paa04-personal-memory-and-preference-corruption).
+
 ## Verification (reproducible control test)
 
 Introduce a conflicting preference through an untrusted source, then test its use in a later session and by a subagent. Correct the record and check subsequent decisions, caches, and scheduled work. Deletion verification must state its scope and retention limits; it cannot retrieve data already disclosed externally.
